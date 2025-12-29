@@ -14,8 +14,8 @@ const navLinks = [
 ];
 
 const languages = [
-  { code: "en", label: "EN" },
   { code: "th", label: "TH" },
+  { code: "en", label: "EN" },
   { code: "cn", label: "CN" },
 ];
 
@@ -50,7 +50,9 @@ const Navbar = () => {
             scrolled ? "text-warm-900" : "text-white"
           }`}
         >
-          {lang === "th" ? "Hey Now Chiang Dao Stay" : "Hey Now Chiang Dao Stay"}
+          {lang === "th"
+            ? "Hey Now Chiang Dao Stay"
+            : "Hey Now Chiang Dao Stay"}
         </div>
 
         {/* Desktop Nav */}

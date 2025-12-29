@@ -8,7 +8,7 @@ import Rooms from "./components/Rooms";
 import Gallery from "./components/Gallery";
 import Location from "./components/Location";
 import Footer from "./components/Footer";
-import RoomDetail from "./components/Roomdetail";
+import RoomDetail from "./components/RoomDetail";
 import Layout from "./components/Layout";
 
 function AppContent() {

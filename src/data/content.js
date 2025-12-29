@@ -22,7 +22,7 @@ export const contentData = {
       text2:
         "Built by local hands using teak and clay, our homestay honors the rhythm of nature. Here, mornings start with the chorus of birds and the aroma of fresh mountain coffee, not alarms. We invite you to disconnect from the noise and reconnect with yourself.",
     },
-    roomsTitle: "Your Sanctuary",
+    roomsTitle: "Our Room",
     roomsDesc:
       "Designed for rest. Each room is a unique vantage point to the beauty of Chiang Dao.",
     viewDetails: "View Details",

@@ -12,7 +12,7 @@ const ShowCalendar = () => {
   const calendarSrc = "https://calendar.google.com/calendar/embed?src=aidenmccourtt%40gmail.com&ctz=Asia%2FBangkok&mode=month&showPrint=0&showTabs=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23FDFBF7&color=%233E3832&epr=1";
 
   return (
-    <section id="calendar" className="relative py-16 md:py-24 bg-[#FDFBF7] overflow-hidden">
+    <section id="booking" className="relative py-8 md:py-24 bg-[#FDFBF7] overflow-hidden">
       
       {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -28,14 +28,11 @@ const ShowCalendar = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-10 md:mb-16"
+          className="text-center mb-10 md:mb-12"
         >
-          <h2 className="font-['Cormorant_Garamond',serif] text-4xl md:text-6xl lg:text-7xl text-[#3E3832] font-medium mb-2 md:mb-4 leading-tight">
+          <h2 className="font-['Cormorant_Garamond',serif] text-4xl md:text-5xl lg:text-5xl text-[#3E3832] font-medium mb-2 md:mb-4 leading-tight">
             Reserve Your Stay
           </h2>
-          <p className="font-['Lato',sans-serif] text-[#6B6359] text-base md:text-xl font-light tracking-wide max-w-2xl mx-auto px-2">
-            Select your dates directly to begin your journey with us.
-          </p>
         </motion.div>
 
         {/* Main Calendar Container - Mobile First Heights */}
@@ -44,7 +41,7 @@ const ShowCalendar = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative w-full max-w-[1400px] mx-auto"
+          className="relative w-full max-w-[1400px] md:w-[1200px] lg:w-[1200px] mx-auto"
         >
           {/* Premium Frame Effect */}
           <div className="absolute -inset-1 bg-gradient-to-r from-[#D4C5B0] via-[#E8E0D5] to-[#D4C5B0] rounded-[1rem] md:rounded-[2.5rem] opacity-50 blur-sm" />
@@ -81,7 +78,7 @@ const ShowCalendar = () => {
               Tablet: h-[700px]
               Desktop: h-[850px] (ดูหรูหรา)
             */}
-            <div className="w-full h-[550px] md:h-[700px] lg:h-[850px] relative bg-white">
+            <div className="w-full h-[550px] md:h-[600px] lg:h-[650px] relative bg-white">
               <iframe
                 src={calendarSrc}
                 style={{ 

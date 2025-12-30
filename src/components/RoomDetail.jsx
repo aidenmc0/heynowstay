@@ -39,15 +39,6 @@ const RoomDetail = () => {
         });
     }
 
-    // Slide สุดท้ายสำหรับ Booking
-    slides.push({
-        image: room.mainImage,
-        title: content.bookNow || "Book This Room", // ใช้ Text จาก Context
-        desc: `Includes: ${room.features ? room.features.join(' • ') : 'All amenities included'}.`,
-        subtitle: "Included",
-        action: content.bookNow || "Book This Room"
-    });
-
     return slides;
   };
 
@@ -89,54 +80,12 @@ const RoomDetail = () => {
         <GodRay />
       </div>
 
-      {/* Back Button */}
-      <div className="fixed top-6 left-6 z-50">
-        <Link to="/#rooms">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 bg-black/20 backdrop-blur-md text-white px-5 py-2 rounded-full border border-white/10 shadow-lg text-sm tracking-widest uppercase hover:bg-white/10 transition-colors"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M15 18l-6-6 6-6"/>
-            </svg>
-            {content.backToRooms || "Back to Rooms"} {/* ใช้ Text จาก Context */}
-          </motion.button>
-        </Link>
-      </div>
-
       {/* Progress Bar */}
       <div className="fixed top-6 left-0 right-0 z-40 px-20 flex justify-center">
         <ProgressBar 
           totalSlides={slides.length} 
           activeIndex={activeSlideIndex} 
         />
-      </div>
-
-      {/* Navigation Arrows */}
-      <div className="hidden md:flex fixed top-1/2 left-6 -translate-y-1/2 z-40 flex-col gap-4">
-        <button 
-          onClick={() => {
-             if (activeSlideIndex > 0) {
-                const target = containerRef.current.children[activeSlideIndex - 1];
-                target?.scrollIntoView({ behavior: 'smooth' });
-             }
-          }}
-          className="w-12 h-12 rounded-full bg-black/20 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all"
-        >
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 15l-6-6-6 6"/></svg>
-        </button>
-        <button 
-          onClick={() => {
-             if (activeSlideIndex < slides.length - 1) {
-                const target = containerRef.current.children[activeSlideIndex + 1];
-                target?.scrollIntoView({ behavior: 'smooth' });
-             }
-          }}
-          className="w-12 h-12 rounded-full bg-black/20 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-all"
-        >
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
       </div>
 
       {/* Main Snap Container */}

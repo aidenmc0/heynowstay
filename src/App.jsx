@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import RoomDetail from "./components/RoomDetail";
 import Layout from "./components/Layout";
 import ShowCalendar from "./components/ShowCalendar";
+import Restaurant from "./components/Restaurant";
 
 function AppContent() {
   const { lang } = useLanguage(); // ดึงภาษาปัจจุบัน
@@ -27,6 +28,7 @@ function AppContent() {
               <Story />
               <Highlights />
               <Rooms />
+              <Restaurant/>
               <ShowCalendar/>
               <Gallery />
               <Layout />

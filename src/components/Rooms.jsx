@@ -7,7 +7,7 @@ const Rooms = () => {
   const { content } = useLanguage(); 
   
   return (
-    <section id="rooms" className="py-24 px-6 max-w-7xl mx-auto bg-warm-50">
+    <section id="rooms" className="py-16 px-6 max-w-7xl mx-auto bg-warm-50">
       <div className="text-center mb-20">
         {/* --- 2. ใช้ Text จาก content แทน Hardcode เพื่อรองรับภาษา --- */}
         <h2 className="font-serif text-5xl text-warm-900 mb-4 tracking-tight">

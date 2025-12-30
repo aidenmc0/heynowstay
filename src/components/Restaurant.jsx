@@ -1,0 +1,166 @@
+import { motion } from "framer-motion";
+import { useLanguage } from "../contexts/LanguageContext";
+import { Utensils, Coffee, Sunset } from 'lucide-react';
+
+// ตัวอย่างข้อมูลเมนู (คุณสามารถดึงจาก Context แทนได้ถ้ามีหลายภาษา)
+const signatureDishes = [
+  {
+    id: 1,
+    name: "Northern Thai Breakfast Set",
+    nameTh: "เซ็ตอาหารเช้าเหนือ",
+    desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
+    descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
+    price: "THB 280",
+    image: "/assets/image/Food/breakfast.jpg", // เปลี่ยนเป็นรูปจริง
+    icon: <Coffee size={16} />
+  },
+  {
+    id: 2,
+    name: "Slow-Cooked Jungle Curry",
+    nameTh: "แกงป่าเนื้อค่อย",
+    desc: "Served in a traditional clay pot with fresh herbs picked from our garden.",
+    descTh: "เสิร์ฟในหม้อดินเผา พร้อมสมุนไพรสดจากสวนของเรา",
+    price: "THB 350",
+    image: "/assets/image/Food/curry.jpg",
+    icon: <Utensils size={16} />
+  },
+  {
+    id: 3,
+    name: "Sunset Herbal Drink",
+    nameTh: "เครื่องดื่มสมุนไพรตะวันลับ",
+    desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
+    descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
+    price: "THB 120",
+    image: "/assets/image/Food/drink.jpg",
+    icon: <Sunset size={16} />
+  }
+];
+
+const Restaurant = () => {
+  // ใช้ Context เพื่อดึงหัวข้อ (ถ้ามี)
+  const { content } = useLanguage();
+
+  return (
+    <section id="restaurant" className="relative py-10 md:py-12 bg-[#FAF8F5] overflow-hidden">
+      
+      {/* Background Texture */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* 1. Header Section: Cinematic Vibe */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="mb-20"
+        >
+          <div className="flex flex-col md:flex-row gap-8 items-end mb-8">
+            <span className="text-[#A89F91] text-xs font-bold tracking-[0.3em] uppercase">
+              Culinary Experience
+            </span>
+            <div className="h-[1px] bg-[#D4C5B0] flex-1 opacity-50"></div>
+          </div>
+
+          <h2 className="font-['Cormorant_Garamond',serif] text-5xl md:text-7xl text-[#3E3832] font-medium mb-6 leading-[1.1]">
+            Slow Food,<br/>
+            <span className="italic text-warm-600">Real Taste.</span>
+          </h2>
+          
+          <p className="font-['Lato',sans-serif] text-[#6B6359] text-lg md:text-xl font-light max-w-2xl leading-relaxed">
+            Our kitchen celebrates the rhythms of nature. We source organic vegetables from local farmers and craft every meal with patience and care. 
+            <span className="block mt-4 text-warm-800 font-medium italic">
+              Breakfast is included with every stay.
+            </span>
+          </p>
+        </motion.div>
+
+        {/* 2. Menu Highlights: A Gallery of Taste */}
+        <div className="space-y-16 md:space-y-24">
+          {signatureDishes.map((dish, index) => (
+            <motion.div
+              key={dish.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className={`flex flex-col md:flex-row gap-8 md:gap-16 items-center ${
+                index % 2 !== 0 ? 'md:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Image Container - Polaroid Style */}
+              <div className="w-full md:w-1/2 relative group">
+                <div className="absolute -inset-4 bg-[#E8E0D5] rounded-lg -rotate-1 transition-transform group-hover:rotate-1"></div>
+                <div className="relative aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm shadow-lg bg-stone-200">
+                   {/* Placeholder for Image - ใส่รูปจริงที่ dish.image */}
+                   <img 
+                    src={dish.image} 
+                    alt={dish.name}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    onError={(e) => e.target.style.backgroundColor = '#ddd'} // Fallback ถ้าไม่มีรูป
+                  />
+                  
+                  {/* Price Tag Overlay */}
+                  <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 text-warm-900 font-serif text-lg shadow-sm">
+                    {dish.price}
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+                <div className="flex items-center gap-3 text-[#A89F91] mb-2">
+                  {dish.icon}
+                  <span className="text-xs font-bold tracking-widest uppercase">Signature Dish</span>
+                </div>
+
+                <h3 className="font-['Cormorant_Garamond',serif] text-3xl md:text-5xl text-[#3E3832] leading-tight">
+                  {dish.name}
+                  {/* ถ้าต้องการภาษาไทย */}
+                  {/* <span className="block text-xl text-warm-600 mt-2 font-light">{dish.nameTh}</span> */}
+                </h3>
+                
+                <div className="w-12 h-[1px] bg-[#3E3832]"></div>
+
+                <p className="font-['Lato',sans-serif] text-[#6B6359] leading-relaxed text-lg">
+                  {dish.desc}
+                </p>
+                
+                 {/* ถ้าต้องการภาษาไทย */}
+                 {/* <p className="font-serif text-[#6B6359] leading-relaxed italic">
+                  {dish.descTh}
+                </p> */}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* 3. Call to Action / Footer for Section */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="mt-24 text-center"
+        >
+          <div className="inline-flex flex-col items-center space-y-6 p-8 md:p-12 bg-white rounded-3xl shadow-sm border border-[#F0EBE5] max-w-3xl mx-auto">
+            <h4 className="font-['Cormorant_Garamond',serif] text-2xl md:text-3xl text-[#3E3832]">
+              Dietary Requirements?
+            </h4>
+            <p className="text-warm-700 text-sm md:text-base">
+              Please let us know in advance. We are happy to prepare vegetarian, vegan, or gluten-free options using our fresh local ingredients.
+            </p>
+            
+            <button className="mt-4 px-8 py-3 border border-[#3E3832] text-[#3E3832] rounded-full hover:bg-[#3E3832] hover:text-white transition-colors duration-300 text-sm tracking-widest uppercase font-bold">
+              View Full Menu (PDF) {/* หรือ Link ไปหน้าเมนูเต็ม */}
+            </button>
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Restaurant;

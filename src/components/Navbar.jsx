@@ -37,22 +37,20 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={` fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
           ? "bg-warm-50/90 backdrop-blur-md shadow-sm py-4"
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto pl-4 pr-6 md:px-6 flex justify-between items-center">
         {/* Logo */}
         <div
           className={`font-serif text-xl md:text-2xl tracking-widest cursor-pointer transition-colors duration-300 ${
             scrolled ? "text-warm-900" : "text-white"
           }`}
         >
-          {lang === "th"
-            ? "Hey Now Chiang Dao Stay"
-            : "Hey Now Chiang Dao Stay"}
+         Hey Now Chiang Dao Stay
         </div>
 
         {/* Desktop Nav */}

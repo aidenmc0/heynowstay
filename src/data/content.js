@@ -9,12 +9,14 @@ export const contentData = {
       location: "LOCATION",
       contact: "CONTACT",
     },
+
     hero: {
       book: "BOOK A STAY",
       ourstory: "OUR STORY",
       subtitle:
         "A refuge for the soul in the mountains. Experience the art of doing nothing.",
     },
+
     story: {
       title: "Born from a desire to slow down.",
       text1:
@@ -22,10 +24,15 @@ export const contentData = {
       text2:
         "Built by local hands using teak and clay, our homestay honors the rhythm of nature. Here, mornings start with the chorus of birds and the aroma of fresh mountain coffee, not alarms. We invite you to disconnect from the noise and reconnect with yourself.",
     },
+
     roomsTitle: "Our Room",
     roomsDesc:
       "Designed for rest. Each room is a unique vantage point to the beauty of Chiang Dao.",
     viewDetails: "View Details",
+   
+    calendarTitle: "Check Availability", // ชื่อปุ่มหรือข้อความบนหน้าจอง
+    calendarDesc: "Select your desired dates to ensure a seamless stay.", // คำอธิบาย
+
     footerTitle: "Come and Rest.",
     footerDesc:
       "A quiet sanctuary in the mountains of Chiang Dao where time slows down,",
@@ -339,6 +346,10 @@ export const contentData = {
     roomsDesc:
       "ออกแบบมาเพื่อการพักผ่อน แต่ละห้องเสนอมุมมองที่สวยงามเห็นภูเขาเชียงดาว",
     viewDetails: "ดูรายละเอียด",
+
+    calendarTitle: "ตรวจสอบวันว่างว่าง",
+    calendarDesc: "เลือกวันที่ต้องการ เพื่อให้การพักผ่อนคลายดูง่ายิ่ง",
+
     footerTitle: "มาพักผ่อนคลายใจ",
     footerDesc: "ศักดิ์สถานแห่งความสงบกลางภูเขาเชียงดาว ที่เวลาช้าลง",
     footerDesc2: "และธรรมชาติจะนำทาง",
@@ -644,6 +655,10 @@ export const contentData = {
     roomsTitle: "您的静修圣地",
     roomsDesc: "专为休憩而设计。每个房间都能一览清迈山区的美景。",
     viewDetails: "查看详情",
+
+    calendarTitle: "检查可用性",
+    calendarDesc: "选择您期望的日期以确保无缝的住宿体验。",
+
     footerTitle: "来休息吧",
     footerDesc: "清迈深山中的一处静谧圣地，时光在此放缓，",
     footerDesc2: "自然引领前行。",

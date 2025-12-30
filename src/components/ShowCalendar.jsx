@@ -7,13 +7,14 @@ const ShowCalendar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { content } = useLanguage();
   
-  // ปรับ URL ให้ซ่อนเมนูที่ไม่จำเป็นของ Google Calendar (Print, etc.) เพื่อความสะอาดตา
-  const calendarSrc = "https://calendar.google.com/calendar/embed?src=aidenmccourtt%40gmail.com&ctz=Asia%2FBangkok&mode=month&showPrint=0&showTabs=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23FFFFFF&color=%2329527A";
+  // วิธีแก้ Cookie: เพิ่ม &epr=1 (Experimental Privacy Reduced) เข้าไป เพื่อลดโอกาสขึ้นหน้าจอ Consent
+  // และปรับ color/bgcolor ให้เข้ากับ Theme มากขึ้น
+  const calendarSrc = "https://calendar.google.com/calendar/embed?src=aidenmccourtt%40gmail.com&ctz=Asia%2FBangkok&mode=month&showPrint=0&showTabs=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23FDFBF7&color=%233E3832&epr=1";
 
   return (
-    <section id="calendar" className="relative py-24 md:py-32 bg-[#FDFBF7] overflow-hidden">
+    <section id="calendar" className="relative py-16 md:py-24 bg-[#FDFBF7] overflow-hidden">
       
-      {/* Background Decoration - เพิ่มความลึกและความหรูหรา */}
+      {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-[#E8E0D5]/30 rounded-full blur-[120px]" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#F4EFE6]/40 rounded-full blur-[100px]" />
@@ -21,26 +22,23 @@ const ShowCalendar = () => {
 
       <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header Section - Typography เน้นความหรูหรา */}
+        {/* Header Section - Responsive Typography */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <span className="inline-block py-1 px-3 border border-[#A89F91] rounded-full text-[#8B8173] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
-            Availability
-          </span>
-          <h2 className="font-['Cormorant_Garamond',serif] text-5xl md:text-7xl text-[#3E3832] font-medium mb-4">
+          <h2 className="font-['Cormorant_Garamond',serif] text-4xl md:text-6xl lg:text-7xl text-[#3E3832] font-medium mb-2 md:mb-4 leading-tight">
             Reserve Your Stay
           </h2>
-          <p className="font-['Lato',sans-serif] text-[#6B6359] text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto">
+          <p className="font-['Lato',sans-serif] text-[#6B6359] text-base md:text-xl font-light tracking-wide max-w-2xl mx-auto px-2">
             Select your dates directly to begin your journey with us.
           </p>
         </motion.div>
 
-        {/* Main Calendar Container - แก้ปัญหาเล็กไปด้วยการทำให้มันใหญ่และดูโปร่ง */}
+        {/* Main Calendar Container - Mobile First Heights */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -49,42 +47,48 @@ const ShowCalendar = () => {
           className="relative w-full max-w-[1400px] mx-auto"
         >
           {/* Premium Frame Effect */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-[#D4C5B0] via-[#E8E0D5] to-[#D4C5B0] rounded-[2.5rem] opacity-50 blur-sm" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#D4C5B0] via-[#E8E0D5] to-[#D4C5B0] rounded-[1rem] md:rounded-[2.5rem] opacity-50 blur-sm" />
           
-          <div className="relative bg-white rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(62,56,50,0.15)] overflow-hidden border border-[#F0EBE5]">
+          <div className="relative bg-white rounded-[1rem] md:rounded-[2rem] shadow-[0_20px_40px_-12px_rgba(62,56,50,0.15)] overflow-hidden border border-[#F0EBE5]">
             
-            {/* Inner Header for the Card */}
-            <div className="bg-[#FAF8F5] px-8 py-6 border-b border-[#F0EBE5] flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-              <div className="flex items-center gap-4">
-                <div className="p-2 bg-[#E8E0D5] rounded-lg text-[#5D554B]">
-                  <Calendar size={24} strokeWidth={1.5} />
+            {/* Inner Header - Mobile Stacked, Desktop Horizontal */}
+            <div className="bg-[#FAF8F5] px-4 py-4 md:px-8 md:py-6 border-b border-[#F0EBE5] flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
+              <div className="flex items-center gap-3 md:gap-4 w-full md:w-auto">
+                <div className="p-2 bg-[#E8E0D5] rounded-lg text-[#5D554B] shrink-0">
+                  <Calendar size={20} strokeWidth={1.5} className="md:w-6 md:h-6" />
                 </div>
-                <div>
-                  <h3 className="font-['Cormorant_Garamond',serif] text-2xl text-[#3E3832] font-semibold">
+                <div className="flex flex-col">
+                  <h3 className="font-['Cormorant_Garamond',serif] text-xl md:text-2xl text-[#3E3832] font-semibold leading-none">
                     Booking Calendar
                   </h3>
-                  <p className="font-['Lato',sans-serif] text-sm text-[#8B8173] flex items-center gap-1 mt-0.5">
-                    <Clock size={12} />
+                  <p className="font-['Lato',sans-serif] text-xs md:text-sm text-[#8B8173] flex items-center gap-1 mt-1.5">
+                    <Clock size={10} className="md:w-3 md:h-3" />
                     Timezone: GMT+07 (Bangkok)
                   </p>
                 </div>
               </div>
               
+              {/* Hide on mobile to save space, show on tablet/desktop */}
               <div className="text-right hidden md:block">
-                <p className="text-[#A89F91] text-xs font-semibold tracking-widest uppercase mb-1">Powered By</p>
+                <p className="text-[#A89F91] text-[10px] md:text-xs font-semibold tracking-widest uppercase mb-1">Powered By</p>
                 <p className="text-[#3E3832] font-medium text-sm">Google Calendar</p>
               </div>
             </div>
 
-            {/* Iframe Wrapper - ปรับความสูงให้เต็มตาและใหญ่ขึ้น */}
-            <div className="w-full h-[750px] md:h-[850px] relative bg-white">
+            {/* Iframe Wrapper - Responsive Heights */}
+            {/* 
+              Mobile: h-[550px] (สั้นลงเพื่อไม่ต้องเลื่อนมาก, ปล่อยให้หน้าเว็บเลื่อนแทน)
+              Tablet: h-[700px]
+              Desktop: h-[850px] (ดูหรูหรา)
+            */}
+            <div className="w-full h-[550px] md:h-[700px] lg:h-[850px] relative bg-white">
               <iframe
                 src={calendarSrc}
                 style={{ 
                   border: '0',
                   width: '100%',
                   height: '100%',
-                  // เทคนิคปรับ iframe ให้ดูสะอาดขึ้น (แต่อยู่ในข้อจำกัดของ Google)
+                  minHeight: '100%'
                 }}
                 frameBorder="0"
                 scrolling="no"
@@ -92,24 +96,23 @@ const ShowCalendar = () => {
                 className="w-full h-full"
               />
               
-              {/* Loading Overlay State (Optional UX) */}
+              {/* Loading Overlay */}
               <div className="absolute inset-0 bg-white flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-500" id="calendar-loader">
                 <span className="font-['Cormorant_Garamond',serif] text-2xl italic text-[#A89F91]">Loading Schedule...</span>
               </div>
             </div>
           </div>
         </motion.div> 
-
       </div>
 
-      {/* Fullscreen Modal Logic (Preserved but refined) */}
+      {/* Fullscreen Modal */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#3E3832]/90 backdrop-blur-md p-4"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#3E3832]/90 backdrop-blur-md p-2 md:p-4"
             onClick={() => setIsOpen(false)}
           >
             <motion.div
@@ -117,16 +120,16 @@ const ShowCalendar = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full h-full max-w-7xl max-h-[90vh] bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+              className="relative w-full h-full max-w-7xl max-h-[95vh] bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex justify-between items-center p-6 border-b border-stone-100 bg-[#FAF8F5]">
-                <h3 className="font-['Cormorant_Garamond',serif] text-2xl text-stone-800">Full Schedule</h3>
+              <div className="flex justify-between items-center p-4 md:p-6 border-b border-stone-100 bg-[#FAF8F5]">
+                <h3 className="font-['Cormorant_Garamond',serif] text-xl md:text-2xl text-stone-800">Full Schedule</h3>
                 <button 
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-stone-200 rounded-full transition-colors text-stone-600"
                 >
-                  <X size={24} />
+                  <X size={20} className="md:w-6 md:h-6" />
                 </button>
               </div>
               <div className="flex-1 bg-white">

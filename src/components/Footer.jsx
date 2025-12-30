@@ -63,7 +63,7 @@ const Footer = () => {
           {/* Right */}
           <div className="flex gap-8 tracking-wide">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/heynow_chiangdao_stay?igsh=MXZ4bzA1djNveHVnaA=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -71,7 +71,7 @@ const Footer = () => {
               Instagram
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/share/17qkwE3XuF/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
@@ -79,7 +79,6 @@ const Footer = () => {
               Facebook
             </a>
             <a
-              href="tel:0846120772"
               className="hover:text-white transition-colors"
             >
               +66 84 612 0772

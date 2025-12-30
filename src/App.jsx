@@ -10,6 +10,7 @@ import Location from "./components/Location";
 import Footer from "./components/Footer";
 import RoomDetail from "./components/RoomDetail";
 import Layout from "./components/Layout";
+import ShowCalendar from "./components/ShowCalendar";
 
 function AppContent() {
   const { lang } = useLanguage(); // ดึงภาษาปัจจุบัน
@@ -26,6 +27,7 @@ function AppContent() {
               <Story />
               <Highlights />
               <Rooms />
+              <ShowCalendar/>
               <Gallery />
               <Layout />
               <Location />

@@ -40,7 +40,6 @@ export const contentData = {
     contactPhone: "Contact via Phone",
     contactLine: "Contact via LINE",
     rights: "© 2026 Hey Now Chiang Dao Stay. All rights reserved.",
-    backToRooms: "Back to Rooms",
     bookNow: "Book This Room",
     slideAction: "Scroll Down",
     rooms: [
@@ -356,7 +355,6 @@ export const contentData = {
     contactPhone: "ติดต่อผ่านโทรศัพท์",
     contactLine: "ติดต่อผ่าน LINE",
     rights: "© 2026 Hey Now Chiang Dao Stay. สงวนลิขสิทธิ์.",
-    backToRooms: "กลับไปหน้าห้องพัก",
     bookNow: "จองห้องพัก",
     slideAction: "เลื่อนลง",
     rooms: [
@@ -665,7 +663,6 @@ export const contentData = {
     contactPhone: "电话联系",
     contactLine: "LINE 联系",
     rights: "© 2026 Hey Now Chiang Dao Stay. 版权所有。",
-    backToRooms: "返回客房",
     bookNow: "预订客房",
     slideAction: "向下滚动",
     rooms: [

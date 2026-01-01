@@ -12,6 +12,8 @@ const RoomDetail = () => {
   const { id } = useParams();
   const containerRef = useRef(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  
+  // <--- จุดที่ 1: เพิ่ม ; ต่อท้ายบรรทัดนี้ --->
   const navigate = useNavigate(); 
 
   // --- 1. Data & State Management ---
@@ -91,7 +93,7 @@ const RoomDetail = () => {
   };
 
   return (
-    <div className="relative bg-stone-900 text-white h-screen w-screen overflow-hidden font-serif selection:bg-white/20 flex flex-col">
+    <div className="relative bg-stone-900 text-white h-[100dvh] w-screen overflow-hidden font-serif selection:bg-white/20 flex flex-col">
       
       {/* Background 3D */}
       <div className="fixed inset-0 z-[-1] opacity-30 pointer-events-none">
@@ -105,7 +107,7 @@ const RoomDetail = () => {
         {/* Close Button */}
         <button 
           onClick={handleClose}
-          className="pointer-events-auto p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 transition-all duration-300 group"
+          className="pointer-events-auto p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border-white/10 transition-all duration-300 group"
         >
           <X size={20} className="text-white group-hover:rotate-90 transition-transform duration-300" />
         </button>
@@ -165,27 +167,17 @@ const RoomDetail = () => {
       </div>
 
 
-      {/* ================= BOTTOM LAYER: The Film Strip (Room Selector) ================= */}
-      <div className="absolute bottom-0 left-0 right-0 z-40 pb-6 md:pb-8 pt-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none">
-        
-        <div className="container mx-auto px-4 md:px-6 pointer-events-auto">
-          
-          {/* Title Hint */}
-          <div className="hidden md:flex justify-center mb-4">
-             <p className="text-[10px] uppercase tracking-widest text-white/40">Select Room to Explore</p>
-          </div>
-
-        {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
-      {/* ปรับ Layout: ใช้ w-full บน Mobile, container บน Desktop */}
-      <div className="absolute bottom-6 left-0 right-0 z-40 pointer-events-none">
-        
+      {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
+      <div className="
+        absolute bottom-4 left-0 right-0 z-40 pointer-events-none
+        pb-safe md:pb-8 pt-6
+        bg-gradient-to-t from-black/80 via-black/40 to-transparent
+      ">
         <div className="
-          w-full md:container md:mx-auto
-          px-4 md:px-6 pointer-events-auto flex justify-center
+          container mx-auto px-4 md:px-6 pointer-events-auto flex justify-center
         ">
           
           {/* The Dock Container (Glassmorphism) */}
-          {/* เพิ่ม w-full max-w-full เพื่อให้ overflow-x ทำงานได้ดี */}
           <div className="
             flex gap-2 md:gap-3 p-2 md:p-3
             bg-black/40 backdrop-blur-xl border border-white/10 
@@ -210,10 +202,10 @@ const RoomDetail = () => {
                 <img 
                   src={r.mainImage} 
                   alt={r.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
-                {/* Active Indicator */}
+                {/* Active Indicator (เส้นขอบสีขาว) */}
                 {idx === safeIndex && (
                   <motion.div 
                     layoutId="activeRoom"
@@ -223,8 +215,6 @@ const RoomDetail = () => {
               </Link>
             ))}
           </div>
-        </div>
-      </div>
         </div>
       </div>
 

@@ -21,7 +21,7 @@ export default function StoryCard({ slide, isActive }) {
         initial={{ opacity: 0, y: 30 }}
         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative z-10 w-full px-6 pb-24 text-white pointer-events-none"
+        className="relative z-10 w-full px-6 pb-28 md:pb-44 text-white pointer-events-none"
       >
         <span className="inline-block px-3 py-1 mb-3 border border-white/30 rounded-full text-[10px] uppercase tracking-widest bg-black/20 backdrop-blur-md">
           {slide.subtitle}

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function StoryCard({ slide, isActive }) {
   return (
-    <div className="relative w-screen h-[100dvh] flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-stone-900">
+    <div className="relative w-screen h-full flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-stone-900">
       
       {/* 
          แก้จุดสำคัญ: 

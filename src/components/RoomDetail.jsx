@@ -142,7 +142,7 @@ const RoomDetail = () => {
 
 
       {/* ================= CENTER LAYER: The Story (Photo Viewer) ================= */}
-      <div className="flex-1 relative overflow-hidden h-full">
+      <div className="flex-1 relative overflow-hidden h-full min-h-0">
         <div
           ref={containerRef}
           className="h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar flex flex-row"

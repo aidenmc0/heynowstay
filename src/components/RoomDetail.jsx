@@ -44,14 +44,13 @@ const RoomDetail = () => {
 
   const slides = createSlides(room);
 
-  // --- 3. RESET EFFECT (ส่วนสำคัญที่เพิ่มเข้ามา) ---
-  // เมื่อ ID เปลี่ยน ให้ Reset ทุกอย่างกลับไปจุดเริ่มต้น
+  // --- 3. RESET EFFECT ---
   useEffect(() => {
     setActiveSlideIndex(0);
     if (containerRef.current) {
         containerRef.current.scrollLeft = 0; // บังคับเลื่อนไปซ้ายสุด
     }
-  }, [id]); // ดูแปลบอกว่าทำทุกครั้งที่ `id` เปลี่ยน
+  }, [id]);
 
   // --- 4. Intersection Observer ---
   useEffect(() => {
@@ -77,12 +76,11 @@ const RoomDetail = () => {
     });
 
     return () => observer.disconnect();
-  }, [room]); // Re-observe ถ้า Room เปลี่ยน
+  }, [room]);
 
   const handleClose = () => {
-    navigate('/'); // ไปที่หน้าแรก
+    navigate('/');
     setTimeout(() => {
-      // รอให้หน้าเว็บวาด (Render) เสร็จ 100ms แล้วค่อย Scroll
       const roomSection = document.getElementById('rooms');
       if (roomSection) {
         roomSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -99,8 +97,7 @@ const RoomDetail = () => {
       </div>
 
       {/* ================= TOP LAYER: Info & Close ================= */}
-      {/* Glassmorphism Top Bar */}
-      <div className="absolute top-0 left-0 right-0 z-50 flex justify-between items-start p-4 md:p-6 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none">
+      <div className="absolute top-0 left-0 right-0 z-50 flex justify-between items-start p-2 md:p-6 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none">
         
         {/* Close Button */}
         <button 
@@ -113,7 +110,7 @@ const RoomDetail = () => {
         {/* Room Title Badge + Progress */}
         <div className="pointer-events-auto flex flex-col items-center gap-1">            
             {/* ชื่อห้อง */}
-            <span className="text-lg md:text-xl font-medium tracking-wide bg-black/30 backdrop-blur-sm px-4 py-1 rounded-full border border-white/10">
+            <span className="text-sm md:text-lg font-medium tracking-wide bg-black/30 backdrop-blur-sm px-4 py-1 rounded-full border border-white/10">
               {room?.name}
             </span>
 
@@ -145,7 +142,12 @@ const RoomDetail = () => {
       <div className="flex-1 relative overflow-hidden h-full min-h-0">
         <div
           ref={containerRef}
-          className="h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar flex flex-row"
+          // FIX: เพิ่ม touch-pan-x และ overscroll-behavior เพื่อกัน White Space / Bounce
+          className={`
+            h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth 
+            no-scrollbar flex flex-row touch-pan-x
+          `}
+          style={{ overscrollBehavior: 'contain' }}
         >
           {slides.map((slide, sIndex) => (
             <div
@@ -165,27 +167,17 @@ const RoomDetail = () => {
       </div>
 
 
-      {/* ================= BOTTOM LAYER: The Film Strip (Room Selector) ================= */}
-      <div className="absolute bottom-0 left-0 right-0 z-40 pb-6 md:pb-8 pt-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none">
+      {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
+      <div className="absolute bottom-6 left-0 right-0 z-40 pointer-events-none pb-safe md:pb-8 pt-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
         
-        <div className="container mx-auto px-4 md:px-6 pointer-events-auto">
+        <div className="container mx-auto px-4 md:px-6 pointer-events-auto flex justify-center">
           
           {/* Title Hint */}
           <div className="hidden md:flex justify-center mb-4">
              <p className="text-[10px] uppercase tracking-widest text-white/40">Select Room to Explore</p>
           </div>
 
-        {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
-      {/* ปรับ Layout: ใช้ w-full บน Mobile, container บน Desktop */}
-      <div className="absolute bottom-6 left-0 right-0 z-40 pointer-events-none">
-        
-        <div className="
-          w-full md:container md:mx-auto
-          px-4 md:px-6 pointer-events-auto flex justify-center
-        ">
-          
           {/* The Dock Container (Glassmorphism) */}
-          {/* เพิ่ม w-full max-w-full เพื่อให้ overflow-x ทำงานได้ดี */}
           <div className="
             flex gap-2 md:gap-3 p-2 md:p-3
             bg-black/40 backdrop-blur-xl border border-white/10 
@@ -223,8 +215,6 @@ const RoomDetail = () => {
               </Link>
             ))}
           </div>
-        </div>
-      </div>
         </div>
       </div>
 

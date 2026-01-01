@@ -1,21 +1,30 @@
-// src/components/Mobile/StoryCard.jsx
 import { motion } from 'framer-motion';
 
 export default function StoryCard({ slide, isActive }) {
   return (
     <div className="relative w-screen h-[100dvh] flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-stone-900">
+      
+      {/* 
+         แก้จุดสำคัญ: 
+         1. เอา loading="eager" ออก (ใช้ default จะดีกว่า scroll-snap)
+         2. ปรับ z-index ให้แน่ใจว่ารูปอยู่ใต้ overlay
+      */}
       <img
         src={slide.image}
         alt={slide.title}
-        loading="eager"
+        // เปลี่ยนจาก loading="eager" เป็น default หรือ lazy
         className="absolute inset-0 w-full h-full object-cover opacity-80"
+        // ปรับ onError เล็กน้อย ถ้ารูปไม่โหลด ให้ซ่อนรูปที่เสีย
         onError={(e) => {
+          e.target.style.display = 'none'; 
           e.target.style.backgroundColor = '#1c1917';
         }}
       />
 
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
+      {/* Text Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

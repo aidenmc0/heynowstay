@@ -2,19 +2,13 @@ import { motion } from 'framer-motion';
 
 export default function StoryCard({ slide, isActive }) {
   return (
-    <div className="relative w-screen h-full flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-stone-900">
-      
-      {/* 
-         แก้จุดสำคัญ: 
-         1. เอา loading="eager" ออก (ใช้ default จะดีกว่า scroll-snap)
-         2. ปรับ z-index ให้แน่ใจว่ารูปอยู่ใต้ overlay
-      */}
+    <div 
+        className="relative w-screen h-full flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-stone-900"
+    >
       <img
         src={slide.image}
         alt={slide.title}
-        // เปลี่ยนจาก loading="eager" เป็น default หรือ lazy
         className="absolute inset-0 w-full h-full object-cover opacity-80"
-        // ปรับ onError เล็กน้อย ถ้ารูปไม่โหลด ให้ซ่อนรูปที่เสีย
         onError={(e) => {
           e.target.style.display = 'none'; 
           e.target.style.backgroundColor = '#1c1917';

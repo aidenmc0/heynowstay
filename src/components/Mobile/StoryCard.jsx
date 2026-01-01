@@ -2,16 +2,14 @@ import { motion } from 'framer-motion';
 
 export default function StoryCard({ slide, isActive }) {
   return (
-    <div 
-        className="relative w-screen h-full flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-stone-900"
-    >
+    <div className="relative w-screen h-full flex-shrink-0 snap-start overflow-hidden flex items-end justify-center bg-[#050505]">
       <img
         src={slide.image}
         alt={slide.title}
         className="absolute inset-0 w-full h-full object-cover opacity-80"
         onError={(e) => {
           e.target.style.display = 'none'; 
-          e.target.style.backgroundColor = '#1c1917';
+          e.target.style.backgroundColor = '#050505'; // ให้เบื้อหลังตรงกันตอน error
         }}
       />
 

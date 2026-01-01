@@ -18,10 +18,7 @@ const RoomDetail = () => {
   const { content } = useLanguage();
   const rooms = content.rooms || [];
   
-  // หา Index และห้องปัจจุบัน
   const currentIndex = rooms.findIndex((r) => r.id === parseInt(id));
-  
-  // ถ้าไม่มี ID หรือหาไม่เจอ ให้เริ่มที่ห้องแรก
   const safeIndex = currentIndex === -1 ? 0 : currentIndex;
   const room = rooms[safeIndex];
 
@@ -48,7 +45,7 @@ const RoomDetail = () => {
   useEffect(() => {
     setActiveSlideIndex(0);
     if (containerRef.current) {
-        containerRef.current.scrollLeft = 0; // บังคับเลื่อนไปซ้ายสุด
+        containerRef.current.scrollLeft = 0;
     }
   }, [id]);
 
@@ -89,7 +86,7 @@ const RoomDetail = () => {
   };
 
   return (
-    <div className="relative bg-stone-900 text-white h-screen w-screen overflow-hidden font-serif selection:bg-white/20 flex flex-col">
+    <div className="relative bg-stone-900 text-white h-[100dvh] w-screen overflow-hidden font-serif selection:bg-white/20 flex flex-col">
       
       {/* Background 3D */}
       <div className="fixed inset-0 z-[-1] opacity-30 pointer-events-none">
@@ -97,24 +94,23 @@ const RoomDetail = () => {
       </div>
 
       {/* ================= TOP LAYER: Info & Close ================= */}
-      <div className="absolute top-0 left-0 right-0 z-50 flex justify-between items-start p-2 md:p-6 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none">
+      <div className="absolute top-0 left-0 right-0 z-50 flex justify-between items-start p-4 md:p-6 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none">
         
         {/* Close Button */}
         <button 
           onClick={handleClose}
-          className="pointer-events-auto p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 transition-all duration-300 group"
+          className="pointer-events-auto p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border-white/10 transition-all duration-300 group"
         >
           <X size={20} className="text-white group-hover:rotate-90 transition-transform duration-300" />
         </button>
 
         {/* Room Title Badge + Progress */}
         <div className="pointer-events-auto flex flex-col items-center gap-1">            
-            {/* ชื่อห้อง */}
-            <span className="text-sm md:text-lg font-medium tracking-wide bg-black/30 backdrop-blur-sm px-4 py-1 rounded-full border border-white/10">
+            <span className="text-lg md:text-xl font-medium tracking-wide bg-black/30 backdrop-blur-sm px-4 py-1 rounded-full border border-white/10">
               {room?.name}
             </span>
 
-            {/* บอกว่าอยู่หน้าไหน */}
+            {/* Progress Dots */}
             <div className="flex flex-col items-center gap-0.5">
                  <div className="flex gap-1.5 mb-1">
                     {slides.map((_, idx) => (
@@ -139,15 +135,14 @@ const RoomDetail = () => {
 
 
       {/* ================= CENTER LAYER: The Story (Photo Viewer) ================= */}
-      <div className="flex-1 relative overflow-hidden h-full min-h-0">
+      {/* 
+          <--- FIX: ลบ 'h-full min-h-0' ออก ให้เหลือแค่ 'flex-1' 
+          เพื่อให้ Flexbox คำนวณความสูงอัตโนมัติโดยไม่โดน min-h-0
+      */}
+      <div className="flex-1 relative overflow-hidden">
         <div
           ref={containerRef}
-          // FIX: เพิ่ม touch-pan-x และ overscroll-behavior เพื่อกัน White Space / Bounce
-          className={`
-            h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth 
-            no-scrollbar flex flex-row touch-pan-x
-          `}
-          style={{ overscrollBehavior: 'contain' }}
+          className="h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar flex flex-row"
         >
           {slides.map((slide, sIndex) => (
             <div
@@ -168,16 +163,20 @@ const RoomDetail = () => {
 
 
       {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
-      <div className="absolute bottom-6 left-0 right-0 z-40 pointer-events-none pb-safe md:pb-8 pt-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-        
-        <div className="container mx-auto px-4 md:px-6 pointer-events-auto flex justify-center">
+      {/* 
+          <--- FIX: เพิ่ม 'pb-safe' ที่ Wrapper ชั้นนอก 
+          เพื่อกันไม่ให้แถบเลือกห้องโดน Home Bar ของ iPhone
+      */}
+      <div className="
+        absolute bottom-4 left-0 right-0 z-40 pointer-events-none
+        pb-safe md:pb-8 pt-6
+        bg-gradient-to-t from-black/80 via-black/40 to-transparent
+      ">
+        <div className="
+          container mx-auto px-4 md:px-6 pointer-events-auto flex justify-center
+        ">
           
-          {/* Title Hint */}
-          <div className="hidden md:flex justify-center mb-4">
-             <p className="text-[10px] uppercase tracking-widest text-white/40">Select Room to Explore</p>
-          </div>
-
-          {/* The Dock Container (Glassmorphism) */}
+          {/* The Dock Container */}
           <div className="
             flex gap-2 md:gap-3 p-2 md:p-3
             bg-black/40 backdrop-blur-xl border border-white/10 
@@ -202,7 +201,7 @@ const RoomDetail = () => {
                 <img 
                   src={r.mainImage} 
                   alt={r.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
                 {/* Active Indicator */}

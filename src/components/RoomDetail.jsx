@@ -151,7 +151,7 @@ const RoomDetail = () => {
             <div
               key={sIndex}
               data-index={sIndex}
-              className="story-slide-wrapper h-[100dvh] w-screen flex-shrink-0 snap-start relative"
+              className="story-slide-wrapper h-full w-screen flex-shrink-0 snap-start relative"
             >
               <StoryCard
                 slide={slide}

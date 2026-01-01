@@ -175,17 +175,22 @@ const RoomDetail = () => {
              <p className="text-[10px] uppercase tracking-widest text-white/40">Select Room to Explore</p>
           </div>
 
-      {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}      
-      <div className="absolute bottom-8 left-0 right-0 z-40 pointer-events-none">
+        {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
+      {/* ปรับ Layout: ใช้ w-full บน Mobile, container บน Desktop */}
+      <div className="absolute bottom-6 left-0 right-0 z-40 pointer-events-none">
         
-        <div className="container mx-auto px-4 md:px-6 pointer-events-auto flex justify-center">
+        <div className="
+          w-full md:container md:mx-auto
+          px-4 md:px-6 pointer-events-auto flex justify-center
+        ">
           
           {/* The Dock Container (Glassmorphism) */}
+          {/* เพิ่ม w-full max-w-full เพื่อให้ overflow-x ทำงานได้ดี */}
           <div className="
             flex gap-2 md:gap-3 p-2 md:p-3
             bg-black/40 backdrop-blur-xl border border-white/10 
             rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.5)]
-            overflow-x-auto no-scrollbar
+            overflow-x-auto no-scrollbar w-full max-w-full
           ">
             {rooms.map((r, idx) => (
               <Link
@@ -208,8 +213,7 @@ const RoomDetail = () => {
                   className="w-full h-full object-cover"
                 />
                 
-                {/* Active Indicator (เส้นขอบสีขาว) */}
-                {/* อันนี้คือคีย์ครับ ใช้ Border เท่านั้น ไม่มีข้อความ */}
+                {/* Active Indicator */}
                 {idx === safeIndex && (
                   <motion.div 
                     layoutId="activeRoom"

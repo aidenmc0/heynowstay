@@ -5,13 +5,13 @@ const Story = () => {
   const { content } = useLanguage();
 
   return (
-    <section id="story" className="py-32 md:py-40 px-6 max-w-3xl mx-auto">
+    <section id="story" className="py-20 md:py-32 px-6 max-w-3xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-center space-y-12 md:space-y-16"
+        className="text-center space-y-8 md:space-y-10"
       >
         <motion.div 
           initial={{ opacity: 0 }}
@@ -24,7 +24,7 @@ const Story = () => {
           </span>
         </motion.div>
         
-        <h2 className="font-['Cormorant_Garamond',serif] text-4xl md:text-6xl lg:text-7xl text-warm-900 leading-[1.2]">
+        <h2 className="font-['Cormorant_Garamond',serif] text-2xl lg:text-4xl text-warm-900 leading-[1.2]">
           {content.story.title}
         </h2>
         

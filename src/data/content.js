@@ -18,11 +18,11 @@ export const contentData = {
     },
 
     story: {
-      title: "Born from a desire to slow down.",
+      title: "Lan Dao Stream... a quiet reminder of what truly matters.",
       text1:
-        "In the heart of Chiang Dao, where the mountains kiss the clouds, we found a piece of earth that whispers rather than shouts. The Mist Sanctuary is not just a place to sleep; it is a place to remember what it feels like to breathe.",
+        "Within the gentle embrace of Doi Luang Chiang Dao, a majestic mountain standing as a silent guardian of time, a clear stream flows softly through wildflowers, green meadows, and drifting mist nature itself composing a quiet poem that invites the heart to pause and rest.",
       text2:
-        "Built by local hands using teak and clay, our homestay honors the rhythm of nature. Here, mornings start with the chorus of birds and the aroma of fresh mountain coffee, not alarms. We invite you to disconnect from the noise and reconnect with yourself.",
+        "Lam Than Lan Dao is more than a place to stay. Here, time slows, the world grows quiet, and life’s simple beauty returns through flowing water, mountain air, and a calm that lingers long after you leave graceful, refined, and unforgettable.",
     },
 
     roomsTitle: "Our Room",
@@ -335,11 +335,11 @@ export const contentData = {
         "ที่ซึ่งภูเขา ดอกไม้  สายหมอก และลำธาร  ร่วมกันร่ายมนตร์ให้ร่างกายได้หยุดพัก",
     },
     story: {
-      title: "เกิดจากความปรารถง",
+      title: "ลำธารล้านดาว… เรื่องเล็กๆ ที่พาใจกลับไปสู่ความหมายที่ยิ่งใหญ่",
       text1:
         "ท่ามกลางอ้อมกอดของ ดอยหลวงเชียงดาว ภูเขาสูงใหญ่ที่ยืนสงบนิ่งราวผู้เฝ้ามองกาลเวลา มีลำธารใสสายหนึ่งไหลเอื่อย เคียงดอกไม้ ผืนหญ้า และสายหมอกบาง ราวกับธรรมชาติกำลังร่ายบทกวี เชื้อเชิญให้หัวใจได้หยุดพัก ",
       text2:
-        "ำธารล้านดาว คือพื้นที่ซึ่งเวลาเดินช้าลง ไม่มีความเร่งรีบ ไม่มีเสียงรบกวนจากโลกภายนอก มีเพียงเสียงน้ำไหล ลมหายใจที่เบาสบาย และความสงบที่ค่อยๆ ซึมลึกถึงใจ โดยไม่ต้องพยายาม ที่นี่ไม่ใช่เพียงสถานที่พัก แต่คือประสบการณ์ของการกลับคืนสู่ความเรียบง่ายของชีวิต การพักผ่อนที่ละมุน เรียบหรู และน่าจดจำ ในแบบที่คุณจะอยากเก็บไว้… และกลับมาอีกครั้ง ",
+        "ลำธารล้านดาว คือพื้นที่ซึ่งเวลาเดินช้าลง ไม่มีความเร่งรีบ ไม่มีเสียงรบกวนจากโลกภายนอก มีเพียงเสียงน้ำไหล ลมหายใจที่เบาสบาย และความสงบที่ค่อยๆ ซึมลึกถึงใจ โดยไม่ต้องพยายาม ที่นี่ไม่ใช่เพียงสถานที่พัก แต่คือประสบการณ์ของการกลับคืนสู่ความเรียบง่ายของชีวิต การพักผ่อนที่ละมุน เรียบหรู และน่าจดจำ ในแบบที่คุณจะอยากเก็บไว้… และกลับมาอีกครั้ง ",
     },
     roomsTitle: "พื้นที่พักผ่อนคลาสิก",
     roomsDesc:
@@ -644,11 +644,11 @@ export const contentData = {
       subtitle: "在这里，群山、花朵、薄雾与溪流共同施展魔法，让身心得以真正停歇。",
     },
     story: {
-      title: "源于慢下来的渴望",
+      title: "星辰溪流（Lam Than Lan Dao） 静谧之中，回归生命本真。",
       text1:
-        "在清迈山的中心，云朵亲吻山峦，我们找到了一片低语而非呼喊的土地。迷雾圣所不仅仅是一个睡觉的地方；它是让你记住呼吸感觉的地方。",
+        "在清道龙山（Doi Luang Chiang Dao）的温柔怀抱中，巍峨的群山静静伫立，仿佛守望时光的沉默旅人。条清澈的小溪缓缓流淌，穿过花草、绿野与薄雾 宛如大自然在低声吟诗，轻轻邀请人们停下脚步，让心歇息。",
       text2:
-        "由当地双手使用柚木和粘土建造，我们的民宿尊重自然的节奏。在这里，早晨以鸟儿的合唱和新鲜山咖啡的香气开始，而不是闹钟。我们邀请您与噪音断开，重新与您自己连接。",
+        "星辰溪居（Lam Than Lan Dao）不仅是一处居所，更是一段让时间放慢的体验。这里没有匆忙与尘嚣，只有潺潺流水、温柔的呼吸，以及无需刻意却悄然深入内心的宁静 细腻、雅致、令人难忘，让人愿意珍藏于心，并再次归来。",
     },
     roomsTitle: "您的静修圣地",
     roomsDesc: "专为休憩而设计。每个房间都能一览清迈山区的美景。",

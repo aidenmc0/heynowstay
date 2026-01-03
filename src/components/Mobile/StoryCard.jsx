@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import DesktopArrows from './DesktopArrows';
 
 export default function StoryCard({ slide, isActive }) {
   return (
@@ -15,7 +16,7 @@ export default function StoryCard({ slide, isActive }) {
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-
+        {/* <DesktopArrows/> */}
       {/* Text Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

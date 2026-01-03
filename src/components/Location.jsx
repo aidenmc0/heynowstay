@@ -1,4 +1,7 @@
+import { useLanguage } from "../contexts/LanguageContext"; // Import Context
+
 const Location = () => {
+  const { content } = useLanguage();
   return (
     <section
       id="location"
@@ -11,18 +14,14 @@ const Location = () => {
         </h2>
 
         <p className="text-warm-800 font-light leading-relaxed text-lg">
-          Located in the serene highlands of Chiang Dao, just 1.5 hours from
-          Chiang Mai city. We are a sanctuary away from the crowds, surrounded
-          by limestone mountains, caves, and lush rice fields.
+        {content.locationDetail}
         </p>
 
         <div className="space-y-2 text-sm tracking-wide text-warm-900">
           <p>
-            <strong>Address:</strong> ทุ่งละคร-บ้านถ้ำ, 3024, ตำบล เชียงดาว อำเภอเชียงดาว เชียงใหม่ 50170
+            <strong>Address:</strong> {content.addressDetail}
           </p>
-          <p>
-            <strong>Transfer:</strong> Private limousine available upon request.
-          </p>
+
         </div>
       </div>
 

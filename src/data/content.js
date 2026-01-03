@@ -318,16 +318,8 @@ export const contentData = {
         img: "/assets/image/Highlight/image4.jpg",
       },
     ],
-    testimonials: [
-      {
-        text: "I didn't realize how tired I was until I finally exhaled here. The silence is not empty; it's full of peace.",
-        author: "— Sarah, London",
-      },
-      {
-        text: "A rare find in Thailand. It feels less like a hotel and more like being a guest in a beautiful, private home.",
-        author: "— Kenji, Tokyo",
-      },
-    ],
+    locationDetail:"Located in the tranquil heart of Chiang Dao, just 1.5 hours from Chiang Mai, our retreat offers a peaceful escape surrounded by the majestic mountains of Doi Luang, gentle morning mist, blooming flower fields, and winding streams. It is an ideal sanctuary for those seeking privacy, serenity, and a true connection with nature." ,
+    addressDetail:"Thung Lakhon–Ban Tham, No. 3024 Chiang Dao Subdistrict, Chiang Dao District Chiang Mai 50170, Thailand",
   },
 
   th: {
@@ -640,16 +632,8 @@ export const contentData = {
         img: "/assets/image/Highlight/image4.jpg",
       },
     ],
-    testimonials: [
-      {
-        text: "ผมไม่รู้ว่าตัวเองเหนื่อยแค่ไหนจนกว่ามาที่นี่แล้วหายใจ ความเงียบไม่ได้ว่าง่ายเปล่า แต่มันเต็มไปด้วยความสงบ",
-        author: "— ซาราห์, ลอนดอน",
-      },
-      {
-        text: "สถานที่หาดูยากในไทย มันไม่รู้สึกว่าเป็นโรงแต่เหมือนเป็นแขกบ้านส่วนตัวในบ้านที่สวยงามและเป็นส่วนตัว",
-        author: "— เคนจิ, โตเกียว",
-      },
-    ],
+    locationDetail:"ตั้งอยู่ท่ามกลางความสงบของ เชียงดาว ใช้เวลาเดินทางจากตัวเมืองเชียงใหม่เพียง 1.5 ชั่วโมง ที่พักของเราเป็นพื้นที่พักผ่อนอันเงียบสงบ รายล้อมด้วยขุนเขาของดอยหลวง สายหมอกบาง ทุ่งดอกไม้ และลำธานคดเคี้ยว เหมาะสำหรับผู้ที่แสวงหาความเป็นส่วนตัว ความสงบ และการเชื่อมโยงกับธรรมชาติอย่างแท้จริง" ,
+    addressDetail:"ทุ่งละคร-บ้านถ้ำ, 3024, ตำบล เชียงดาว อำเภอเชียงดาว เชียงใหม่ 50170",
   },
 
   cn: {
@@ -960,15 +944,7 @@ export const contentData = {
         img: "/assets/image/Highlight/image4.jpg",
       },
     ],
-    testimonials: [
-      {
-        text: "直到我终于在这里呼气，我才知道我有多累。寂静不是空的；它充满了平静。",
-        author: "— 莎拉，伦敦",
-      },
-      {
-        text: "泰国罕见的发现。感觉不像酒店，更像是作为客人住在一个美丽的私人家里。",
-        author: "— 健二，东京",
-      },
-    ],
+    locationDetail:"坐落于宁静的 清道（Chiang Dao），距离清迈市区约 1.5 小时车程， 我们的度假居所被 清道龙山（Doi Luang） 的群山、轻柔的晨雾、花海与蜿蜒溪流所环绕， 是一处理想的静谧之所，适合追求私密、安宁，并渴望与自然深度相连的旅人。" ,
+    addressDetail:"Thung Lakhon–Ban Tham, No. 3024 Chiang Dao Subdistrict, Chiang Dao District Chiang Mai 50170, Thailand",
   },
 };

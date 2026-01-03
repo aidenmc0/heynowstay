@@ -29,7 +29,7 @@ function AppContent() {
               <Highlights />
               <Rooms />
               <Restaurant/>
-              <ShowCalendar/>
+              {/* <ShowCalendar/> //ยังไม่ใช้*/}
               <Gallery />
               <Layout />
               <Location />

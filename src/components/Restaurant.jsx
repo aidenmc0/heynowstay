@@ -60,21 +60,18 @@ const Restaurant = () => {
         >
           <div className="flex flex-col md:flex-row gap-8 items-end mb-8">
             <span className="text-[#A89F91] text-xs font-bold tracking-[0.3em] uppercase">
-              Culinary Experience
+            Culinary Experience
             </span>
             <div className="h-[1px] bg-[#D4C5B0] flex-1 opacity-50"></div>
           </div>
 
           <h2 className="font-['Cormorant_Garamond',serif] text-5xl md:text-7xl text-[#3E3832] font-medium mb-6 leading-[1.1]">
-            Slow Food,<br/>
-            <span className="italic text-warm-600">Real Taste.</span>
+            Hey Now<br/>
+            <span className="italic text-warm-600">Cafe & Restaurant.</span>
           </h2>
           
           <p className="font-['Lato',sans-serif] text-[#6B6359] text-lg md:text-xl font-light max-w-2xl leading-relaxed">
-            Our kitchen celebrates the rhythms of nature. We source organic vegetables from local farmers and craft every meal with patience and care. 
-            <span className="block mt-4 text-warm-800 font-medium italic">
-              Breakfast is included with every stay.
-            </span>
+            {content.restaurant}
           </p>
         </motion.div>
 
@@ -137,27 +134,6 @@ const Restaurant = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* 3. Call to Action / Footer for Section */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-24 text-center"
-        >
-          <div className="inline-flex flex-col items-center space-y-6 p-8 md:p-12 bg-white rounded-3xl shadow-sm border border-[#F0EBE5] max-w-3xl mx-auto">
-            <h4 className="font-['Cormorant_Garamond',serif] text-2xl md:text-3xl text-[#3E3832]">
-              Dietary Requirements?
-            </h4>
-            <p className="text-warm-700 text-sm md:text-base">
-              Please let us know in advance. We are happy to prepare vegetarian, vegan, or gluten-free options using our fresh local ingredients.
-            </p>
-            
-            <button className="mt-4 px-8 py-3 border border-[#3E3832] text-[#3E3832] rounded-full hover:bg-[#3E3832] hover:text-white transition-colors duration-300 text-sm tracking-widest uppercase font-bold">
-              View Full Menu (PDF) {/* หรือ Link ไปหน้าเมนูเต็ม */}
-            </button>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

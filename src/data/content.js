@@ -32,10 +32,11 @@ export const contentData = {
    
     calendarTitle: "Check Availability", // ชื่อปุ่มหรือข้อความบนหน้าจอง
     calendarDesc: "Select your desired dates to ensure a seamless stay.", // คำอธิบาย
+    restaurant: "Grand in atmosphere, Refined and delicate in every flavor.",
 
     footerTitle: "Come and Rest.",
     footerDesc:
-      "A quiet sanctuary in the mountains of Chiang Dao where time slows down,",
+      "If your heart feels tired, this place is waiting for you,",
     footerDesc2: "and nature leads the way.",
     contactPhone: "Contact via Phone",
     contactLine: "Contact via LINE",
@@ -352,9 +353,10 @@ export const contentData = {
 
     calendarTitle: "ตรวจสอบวันว่างว่าง",
     calendarDesc: "เลือกวันที่ต้องการ เพื่อให้การพักผ่อนคลายดูง่ายิ่ง",
+    restaurant:"เฮนาว คาเฟ่และร้านอาหาร อลังการในบรรยากาศ ละเมียด ละไมในรสชาติ",
 
-    footerTitle: "มาพักผ่อนคลายใจ",
-    footerDesc: "ศักดิ์สถานแห่งความสงบกลางภูเขาเชียงดาว ที่เวลาช้าลง",
+    footerTitle: "ปล่อยใจให้ดอยหลวงดูแล",
+    footerDesc: "ถ้าหัวใจกำลังเหนื่อย ที่นี่กำลังรอคุณอยู่",
     footerDesc2: "และธรรมชาติจะนำทาง",
     contactPhone: "ติดต่อผ่านโทรศัพท์",
     contactLine: "ติดต่อผ่าน LINE",
@@ -664,9 +666,10 @@ export const contentData = {
 
     calendarTitle: "检查可用性",
     calendarDesc: "选择您期望的日期以确保无缝的住宿体验。",
+    restaurant: "Hey Now 咖啡馆 & 餐厅 氛围宏美非凡， 风味细腻雅致。",
 
     footerTitle: "来休息吧",
-    footerDesc: "清迈深山中的一处静谧圣地，时光在此放缓，",
+    footerDesc: "如果你的心感到疲惫，这里正静静等你，",
     footerDesc2: "自然引领前行。",
     contactPhone: "电话联系",
     contactLine: "LINE 联系",

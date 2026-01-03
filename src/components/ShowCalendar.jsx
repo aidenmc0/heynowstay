@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+<iframe src="https://calendar.google.com/calendar/embed?src=8f3708d0f3083726068b865e8cd60f695587c67febe274c207b57276d5a43cc2%40group.calendar.google.com&ctz=Asia%2FBangkok" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 const ShowCalendar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { content } = useLanguage();
   
   // URL เดิมที่ปรับแต่งแล้ว
-  const calendarSrc = "https://calendar.google.com/calendar/embed?src=aidenmccourtt%40gmail.com&ctz=Asia%2FBangkok&mode=month&showPrint=0&showTabs=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23FDFBF7&color=%233E3832&epr=1";
+  const calendarSrc = "https://calendar.google.com/calendar/embed?src=8f3708d0f3083726068b865e8cd60f695587c67febe274c207b57276d5a43cc2%40group.calendar.google.com&ctz=Asia%2FBangkok&mode=month&showPrint=0&showTabs=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23FDFBF7&color=%233E3832&epr=1";
 
   return (
     <section id="booking" className="relative py-32 md:py-48 bg-[#FDFBF7] overflow-hidden">

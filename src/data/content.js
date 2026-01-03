@@ -14,7 +14,7 @@ export const contentData = {
       book: "BOOK A STAY",
       ourstory: "OUR STORY",
       subtitle:
-        "A refuge for the soul in the mountains. Experience the art of doing nothing.",
+        "Where mountains, flowers, mist, and flowing streams come together to cast a spell, allowing your body to truly rest.",
     },
 
     story: {
@@ -332,7 +332,7 @@ export const contentData = {
       book: "จองที่พัก",
       ourstory: "เรื่องราวของเรา",
       subtitle:
-        "ที่พักสำหรับจิตวิญญาณท่ามกลางขุนเขา สัมผัสศิลปะของการไม่ทำอะไร",
+        "ที่ซึ่งภูเขา ดอกไม้  สายหมอก และลำธาร  ร่วมกันร่ายมนตร์ให้ร่างกายได้หยุดพัก",
     },
     story: {
       title: "เกิดจากความปรารถง",
@@ -641,7 +641,7 @@ export const contentData = {
     hero: {
       book: "预订住宿",
       ourstory: "我们的故事",
-      subtitle: "山间心灵的避所，体验无所事事的艺术",
+      subtitle: "在这里，群山、花朵、薄雾与溪流共同施展魔法，让身心得以真正停歇。",
     },
     story: {
       title: "源于慢下来的渴望",

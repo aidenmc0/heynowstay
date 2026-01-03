@@ -81,7 +81,7 @@ const Highlights = () => {
           /* Desktop Grid Layout */
           md:grid 
           md:grid-cols-2 
-          lg:grid-cols-4 
+          lg:grid-cols-3
           md:overflow-visible 
           md:px-6
         "
@@ -109,7 +109,7 @@ const Highlights = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
           >
-            <div className="h-64 overflow-hidden relative">
+            <div className="h-72 overflow-hidden relative">
               <img
                 src={hig.img}
                 alt={hig.title}

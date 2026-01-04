@@ -32,7 +32,7 @@ export const contentData = {
    
     calendarTitle: "Check Availability", // ชื่อปุ่มหรือข้อความบนหน้าจอง
     calendarDesc: "Select your desired dates to ensure a seamless stay.", // คำอธิบาย
-    restaurant: "Grand in atmosphere, Refined and delicate in every flavor.",
+    restaurant: "Open 10:30 am. - 15:00 pm.",
 
     footerTitle: "Come and Rest.",
     footerDesc:
@@ -395,7 +395,7 @@ export const contentData = {
 
     calendarTitle: "ตรวจสอบวันว่างว่าง",
     calendarDesc: "เลือกวันที่ต้องการ เพื่อให้การพักผ่อนคลายดูง่ายิ่ง",
-    restaurant:"เฮนาว คาเฟ่และร้านอาหาร อลังการในบรรยากาศ ละเมียด ละไมในรสชาติ",
+    restaurant: "Open 10:30 am. - 15:00 pm.",
 
     footerTitle: "ปล่อยใจให้ดอยหลวงดูแล",
     footerDesc: "ถ้าหัวใจกำลังเหนื่อย ที่นี่กำลังรอคุณอยู่",
@@ -744,7 +744,7 @@ export const contentData = {
 
     calendarTitle: "检查可用性",
     calendarDesc: "选择您期望的日期以确保无缝的住宿体验。",
-    restaurant: "Hey Now 咖啡馆 & 餐厅 氛围宏美非凡， 风味细腻雅致。",
+    restaurant: "Open 10:30 am. - 15:00 pm.",
 
     footerTitle: "来休息吧",
     footerDesc: "如果你的心感到疲惫，这里正静静等你，",

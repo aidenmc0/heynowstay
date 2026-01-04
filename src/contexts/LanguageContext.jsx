@@ -4,7 +4,7 @@ import { contentData } from '../data/content';
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [lang, setLang] = useState('en'); // Default เป็นภาษาไทย
+  const [lang, setLang] = useState('th'); // Default เป็นภาษาไทย
   const [content, setContent] = useState(contentData.en); // Default Content เป็นไทย
 
   const changeLanguage = (newLang) => {

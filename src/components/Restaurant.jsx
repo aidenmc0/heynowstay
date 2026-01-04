@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Utensils, Coffee, Sunset } from 'lucide-react';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { X } from "lucide-react";
 // ตัวอย่างข้อมูลเมนู (คุณสามารถดึงจาก Context แทนได้ถ้ามีหลายภาษา)
 
@@ -25,6 +25,21 @@ utensils: <Utensils size={16} />,
 sunset: <Sunset size={16} />
 };
 
+useEffect(() => {
+    if (isGalleryOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+  
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [isGalleryOpen]);
+  
 return (
 <section id="restaurant" className="relative py-10 md:py-12 bg-[#FAF8F5] overflow-hidden">
 

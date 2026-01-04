@@ -10,11 +10,12 @@ const Restaurant = () => {
 const { content } = useLanguage();
 const [activeImage, setActiveImage] = useState(null);
 const menuImages = [
-    "/assets/image/Restaurant/image1.jpg",
     "/assets/image/Restaurant/image2.jpg",
-    "/assets/image/Restaurant/image3.jpg",
     "/assets/image/Restaurant/image4.jpg",
     "/assets/image/Restaurant/image5.jpg",
+    "/assets/image/Restaurant/image6.jpg",
+    "/assets/image/Restaurant/image7.jpg",
+    "/assets/image/Restaurant/image3.jpg",
   ];
   
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);

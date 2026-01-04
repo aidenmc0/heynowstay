@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Utensils, Coffee, Sunset } from 'lucide-react';
-
+import { useState } from "react";
+import { X } from "lucide-react";
 // ตัวอย่างข้อมูลเมนู (คุณสามารถดึงจาก Context แทนได้ถ้ามีหลายภาษา)
 
 const Restaurant = () => {
 // ใช้ Context เพื่อดึงหัวข้อ (ถ้ามี)
 const { content } = useLanguage();
+const [activeImage, setActiveImage] = useState(null);
+
 const iconMap = {
 coffee: <Coffee size={16} />,
 utensils: <Utensils size={16} />,
@@ -64,8 +67,10 @@ index % 2 !== 0 ? 'md:flex-row-reverse' : ''
 {/* Image Container - Polaroid Style */}
 <div className="w-full md:w-1/2 relative group">
 <div className="absolute -inset-4 bg-[#E8E0D5] rounded-lg -rotate-1 transition-transform group-hover:rotate-1"></div>
-<div className="relative aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm shadow-lg bg-stone-200">
-{/* Placeholder for Image - ใส่รูปจริงที่ dish.image */}
+<div
+  className="relative aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-sm shadow-lg bg-stone-200 cursor-zoom-in"
+  onClick={() => setActiveImage(dish.image)}
+>{/* Placeholder for Image - ใส่รูปจริงที่ dish.image */}
 <img
 src={dish.image}
 alt={dish.name}
@@ -108,6 +113,39 @@ onError={(e) => e.target.style.backgroundColor = '#ddd'} // Fallback ถ้า�
 ))}
 </div>
 </div>
+{activeImage && (
+  <motion.div
+    className="fixed inset-0 z-50 bg-[#1C1A18]/90 backdrop-blur-sm flex items-center justify-center px-4"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    onClick={() => setActiveImage(null)}
+  >
+    <motion.img
+      src={activeImage}
+      alt="Expanded dish"
+      className="max-h-[90vh] max-w-[90vw] object-contain rounded-sm shadow-2xl"
+      initial={{ scale: 0.95, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      onClick={(e) => e.stopPropagation()}
+    />
+
+    {/* Premium Close Button */}
+    <button
+      onClick={() => setActiveImage(null)}
+      className="absolute top-6 right-6 pointer-events-auto p-3 rounded-full 
+                 bg-white/10 hover:bg-white/20 
+                 backdrop-blur-md border border-white/10 
+                 transition-all duration-300 group"
+    >
+      <X 
+        size={20} 
+        className="text-white/90 group-hover:rotate-90 transition-transform duration-300" 
+      />
+    </button>
+  </motion.div>
+)}
 </section>
 );
 };

@@ -315,7 +315,7 @@ export const contentData = {
         desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
         descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
         price: "THB 120",
-        image: "/assets/image/Food/drink.jpg",
+        image: "/assets/image/Restaurant/image3.jpg",
         icon: "coffee"
       }
     ],

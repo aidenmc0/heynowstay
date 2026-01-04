@@ -271,19 +271,19 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Camping.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Camping.jpg",
+            image: "/assets/image/Rooms/Camping/image1.jpg",
             title: "Camping Area",
             subtitle: "Overview",
             desc: "Premium camping ground with a million-view backdrop.",
           },
           {
-            image: "/assets/image/Rooms/Camping/Night.jpg",
+            image: "/assets/image/Rooms/Camping/image2.jpg",
             title: "Peaceful atmosphere with an international vibe",
             subtitle: "Stars",
             desc: "Flowers, ponds, streams, and Doi Luang scenery.",
           },
           {
-            image: "/assets/image/Rooms/Camping/Day.jpg",
+            image: "/assets/image/Rooms/Camping/image3.jpg",
             title: "Car Camp Zone",
             subtitle: "Morning",
             desc: "Drive in, park, and relax together with your beloved car.",
@@ -628,19 +628,19 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Camping.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Camping.jpg",
+            image: "/assets/image/Rooms/Camping/image1.jpg",
             title: "ลานกางเต็นท์",
             subtitle: "ภาพรวม",
             desc: "ลานกางเต็นท์อย่างมีระดับ กับฉากหลังร้อยล้านวิว",
           },
           {
-            image: "/assets/image/Rooms/Camping/Night.jpg",
+            image: "/assets/image/Rooms/Camping/image2.jpg",
             title: "บรรยากาศสงบฟิวต่างประเทศ",
             subtitle: "พื้นที่กองไฟ",
             desc: "ดอกไม้ สระน้ำ ลำธาร และดอยหลวง",
           },
           {
-            image: "/assets/image/Rooms/Camping/Day.jpg",
+            image: "/assets/image/Rooms/Camping/image3.jpg",
             title: "โซน Car camp",
             subtitle: "สดชื่น",
             desc: "ขับมา จอดพร้อมรถคู่ใจให้คุณได้พักผ่อนไปพร้อมกัน",
@@ -989,19 +989,19 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Camping.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Camping.jpg",
+            image: "/assets/image/Rooms/Camping/image1.jpg",
             title: "露营区",
             subtitle: "外观",
             desc: "高端露营区，坐拥百万级自然美景",
           },
           {
-            image: "/assets/image/Rooms/Camping/Night.jpg",
+            image: "/assets/image/Rooms/Camping/image2.jpg",
             title: "宁静氛围，宛如国外度假体验",
             subtitle: "星空",
             desc: "花园、池塘、溪流与清道山美景",
           },
           {
-            image: "/assets/image/Rooms/Camping/Day.jpg",
+            image: "/assets/image/Rooms/Camping/image3.jpg",
             title: "汽车露营专区",
             subtitle: "早晨",
             desc: "驾车直达，与爱车一同放松休憩",

@@ -24,17 +24,17 @@ export default function StoryCard({ slide, isActive }) {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative z-10 w-full px-6 pb-28 md:pb-44 text-white pointer-events-none"
       >
-        <span className="inline-block px-3 py-1 mb-3 border border-white/30 rounded-full text-[10px] uppercase tracking-widest bg-black/20 backdrop-blur-md">
+        {/* <span className="inline-block px-3 py-1 mb-3 border border-white/30 rounded-full text-[10px] uppercase tracking-widest bg-black/20 backdrop-blur-md">
           {slide.subtitle}
-        </span>
+        </span> */}
         <h2 className="serif text-5xl mb-3 leading-tight">{slide.title}</h2>
         <p className="text-white/90 text-sm font-light leading-relaxed mb-6 max-w-md text-shadow-soft">
           {slide.desc}
         </p>
 
-        <button className="pointer-events-auto flex items-center gap-3 text-xs uppercase tracking-[0.2em] bg-white text-black px-5 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors">
+        {/* <button className="pointer-events-auto flex items-center gap-3 text-xs uppercase tracking-[0.2em] bg-white text-black px-5 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors">
           {slide.action}
-        </button>
+        </button> */}
       </motion.div>
     </div>
   );

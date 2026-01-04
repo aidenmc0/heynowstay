@@ -120,7 +120,7 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Daramanee.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Daramanee/image7.jpg",
+            image: "/assets/image/Rooms/Daramanee/image1.jpg",
             title: "Daramanee House",
             subtitle: "Overview",
             desc: "Tropical-style solid wood house Warm, cozy, and simply charming.",
@@ -132,13 +132,13 @@ export const contentData = {
             desc: "A timeless design with a relaxing garden-home atmosphere.",
           },
           {
-            image: "/assets/image/Rooms/Daramanee/image6.jpg",
+            image: "/assets/image/Rooms/Daramanee/image3.jpg",
             title: "Beautiful backdrop of Henaw Stream",
             subtitle: "Atmosphere",
             desc: "A stunning stream with a magnificent natural setting.",
           },
           {
-            image: "/assets/image/Rooms/Daramanee/image10.jpg",
+            image: "/assets/image/Rooms/Daramanee/image4.jpg",
             title: "Private pool villa",
             subtitle: "Location",
             desc: "A small private pool surrounded by mountains.",
@@ -199,13 +199,13 @@ export const contentData = {
             desc: "Tropical-style wooden house Surrounded by flower gardens and a charming white fence.",
           },
           {
-            image: "/assets/image/Rooms/Leelawadee/image8.jpg",
+            image: "/assets/image/Rooms/Leelawadee/image2.jpg",
             title: "Three lovely beds",
             subtitle: "Space",
             desc: "Decorated with natural wood tones, brick walls, and soft natural light.",
           },
           {
-            image: "/assets/image/Rooms/Leelawadee/image10.jpg",
+            image: "/assets/image/Rooms/Leelawadee/image3.jpg",
             title: "Stylish wooden swing",
             subtitle: "Experience",
             desc: "Gently swing while enjoying views of Doi Luang and the stream.",
@@ -420,19 +420,19 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Phruay.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Phruay/image8.jpg",
+            image: "/assets/image/Rooms/Phruay/image1.jpg",
             title: "บ้านพารวย",
             subtitle: "ภาพรวม",
             desc: "บ้านทรงโมเดิร์น A-Frames หลังใหญ่",
           },
           {
-            image: "/assets/image/Rooms/Phruay/image3.jpg",
+            image: "/assets/image/Rooms/Phruay/image2.jpg",
             title: "อ่างอาบน้ำส่วนตัว",
             subtitle: "บรรยากาศ",
             desc: "รายล้อมไปด้วยสวนดอกไม้สุดสวย",
           },
           {
-            image: "/assets/image/Rooms/Phruay/image4.jpg",
+            image: "/assets/image/Rooms/Phruay/image3.jpg",
             title: "ชั้นดาดฟ้าดูดาวส่วนตัว",
             subtitle: "สิ่งแวดล้อมรอบ",
             desc: "บรรยากาศดวงดาวบนท้องฟ้านับล้าน",
@@ -482,7 +482,7 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Daramanee.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Daramanee/image7.jpg",
+            image: "/assets/image/Rooms/Daramanee/image1.jpg",
             title: "บ้านดารามณี",
             subtitle: "ภาพรวม",
             desc: "บ้านพักสไตล์ทรอปิคอลไม้แท้ อบอุ่น เรียบง่าย",
@@ -494,13 +494,13 @@ export const contentData = {
             desc: "เตียงไม้สี่เสาสุดคลาสสิกและกลิ่นอายความผ่อนคลายแบบบ้านในสวน",
           },
           {
-            image: "/assets/image/Rooms/Daramanee/image6.jpg",
+            image: "/assets/image/Rooms/Daramanee/image3.jpg",
             title: "ฉากหลังของลำธารเฮนาวสุดสวย",
             subtitle: "บรรยากาศ",
             desc: "ลำธารสุดสวยพร้อมฉากหลังอลังการ",
           },
           {
-            image: "/assets/image/Rooms/Daramanee/image10.jpg",
+            image: "/assets/image/Rooms/Daramanee/image4.jpg",
             title: "พลูวิลล่าส่วนตัว",
             subtitle: "ทำเลือดี",
             desc: "สระว่ายน้ำขนาดย่อมท่ามกลางขุนเขา",
@@ -775,19 +775,19 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Phruay.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Phruay/image8.jpg",
+            image: "/assets/image/Rooms/Phruay/image1.jpg",
             title: "富贵屋",
             subtitle: "外观",
             desc: "大型现代 A 字型度假屋",
           },
           {
-            image: "/assets/image/Rooms/Phruay/image3.jpg",
+            image: "/assets/image/Rooms/Phruay/image2.jpg",
             title: "私人浴缸",
             subtitle: "氛围",
             desc: "环绕在美丽的花园之中",
           },
           {
-            image: "/assets/image/Rooms/Phruay/image4.jpg",
+            image: "/assets/image/Rooms/Phruay/image3.jpg",
             title: "私人屋顶观星区",
             subtitle: "环境",
             desc: "仰望满天繁星",
@@ -843,7 +843,7 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Daramanee.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Daramanee/image7.jpg",
+            image: "/assets/image/Rooms/Daramanee/image1.jpg",
             title: "达拉玛尼屋",
             subtitle: "外观",
             desc: "聆听溪流的轻柔声音。一个舒适亲密的环境，非常适合深度休息。",
@@ -855,13 +855,13 @@ export const contentData = {
             desc: "营造庭院式的放松氛围",
           },
           {
-            image: "/assets/image/Rooms/Daramanee/image6.jpg",
+            image: "/assets/image/Rooms/Daramanee/image3.jpg",
             title: "赫瑙溪流美景",
             subtitle: "氛围",
             desc: "背景壮丽迷人",
           },
           {
-            image: "/assets/image/Rooms/Daramanee/image10.jpg",
+            image: "/assets/image/Rooms/Daramanee/image4.jpg",
             title: "私人泳池别墅",
             subtitle: "位置",
             desc: "群山环绕之中",

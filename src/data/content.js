@@ -286,6 +286,40 @@ export const contentData = {
         features: ["Luxury Tent", "Fire Pit", "Shared Facilities"],
       },
     ],
+
+    signatureDishes: [
+      {
+        id: 1,
+        name: "Slow-Cooked Jungle Curry",
+        nameTh: "แกงป่าเนื้อค่อย",
+        desc: "Served in a traditional clay pot with fresh herbs picked from our garden.",
+        descTh: "เสิร์ฟในหม้อดินเผา พร้อมสมุนไพรสดจากสวนของเรา",
+        price: "THB 350",
+        image: "/assets/image/Restaurant/image1.jpg",
+        icon: "sunset"
+      },
+      {
+        id: 2,
+        name: "Northern Thai Breakfast Set",
+        nameTh: "เซ็ตอาหารเช้าเหนือ",
+        desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
+        descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
+        price: "THB 280",
+        image: "/assets/image/Food/breakfast.jpg", // เปลี่ยนเป็นรูปจริง
+        icon: "utensils"
+      },
+      {
+        id: 3,
+        name: "Sunset Herbal Drink",
+        nameTh: "เครื่องดื่มสมุนไพรตะวันลับ",
+        desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
+        descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
+        price: "THB 120",
+        image: "/assets/image/Food/drink.jpg",
+        icon: "coffee"
+      }
+    ],
+
     highlightsTitle: "Resort Highlights",
     highlightsSubtitle: "Experience the unique features that set us apart.",
     highlightsOurstory: "OURHILIGHTS",

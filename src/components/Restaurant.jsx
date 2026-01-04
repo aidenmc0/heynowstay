@@ -3,42 +3,15 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { Utensils, Coffee, Sunset } from 'lucide-react';
 
 // ตัวอย่างข้อมูลเมนู (คุณสามารถดึงจาก Context แทนได้ถ้ามีหลายภาษา)
-const signatureDishes = [
-  {
-    id: 1,
-    name: "Northern Thai Breakfast Set",
-    nameTh: "เซ็ตอาหารเช้าเหนือ",
-    desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
-    descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
-    price: "THB 280",
-    image: "/assets/image/Food/breakfast.jpg", // เปลี่ยนเป็นรูปจริง
-    icon: <Coffee size={16} />
-  },
-  {
-    id: 2,
-    name: "Slow-Cooked Jungle Curry",
-    nameTh: "แกงป่าเนื้อค่อย",
-    desc: "Served in a traditional clay pot with fresh herbs picked from our garden.",
-    descTh: "เสิร์ฟในหม้อดินเผา พร้อมสมุนไพรสดจากสวนของเรา",
-    price: "THB 350",
-    image: "/assets/image/Food/curry.jpg",
-    icon: <Utensils size={16} />
-  },
-  {
-    id: 3,
-    name: "Sunset Herbal Drink",
-    nameTh: "เครื่องดื่มสมุนไพรตะวันลับ",
-    desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
-    descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
-    price: "THB 120",
-    image: "/assets/image/Food/drink.jpg",
-    icon: <Sunset size={16} />
-  }
-];
 
 const Restaurant = () => {
   // ใช้ Context เพื่อดึงหัวข้อ (ถ้ามี)
   const { content } = useLanguage();
+  const iconMap = {
+    coffee: <Coffee size={16} />,
+    utensils: <Utensils size={16} />,
+    sunset: <Sunset size={16} />
+  };
 
   return (
     <section id="restaurant" className="relative py-10 md:py-12 bg-[#FAF8F5] overflow-hidden">
@@ -77,7 +50,7 @@ const Restaurant = () => {
 
         {/* 2. Menu Highlights: A Gallery of Taste */}
         <div className="space-y-16 md:space-y-24">
-          {signatureDishes.map((dish, index) => (
+          {content.signatureDishes.map((dish, index) => (
             <motion.div
               key={dish.id}
               initial={{ opacity: 0, y: 50 }}
@@ -110,7 +83,7 @@ const Restaurant = () => {
               {/* Content */}
               <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
                 <div className="flex items-center gap-3 text-[#A89F91] mb-2">
-                  {dish.icon}
+                  {iconMap[dish.icon]}
                   <span className="text-xs font-bold tracking-widest uppercase">Signature Dish</span>
                 </div>
 

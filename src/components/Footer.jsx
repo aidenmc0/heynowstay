@@ -23,7 +23,7 @@ const Footer = () => {
         {/* ===== Contact Actions ===== */}
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <a
-            href="tel:0822320083"
+            href="tel:0931388234"
             className="
             bg-white/10 backdrop-blur-sm text-white
               px-10 py-4 rounded-full
@@ -81,7 +81,7 @@ const Footer = () => {
             <a
               className="hover:text-white transition-colors"
             >
-              +66 84 612 0772
+              +66 93 138 8234
             </a>
           </div>
 

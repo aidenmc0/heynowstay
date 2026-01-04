@@ -218,7 +218,7 @@ onError={(e) => e.target.style.backgroundColor = '#ddd'} // Fallback ถ้า�
         setCurrentIndex((prev) => (prev === 0 ? menuImages.length - 1 : prev - 1))
       }
       className="hidden md:flex absolute left-6 p-4 rounded-full 
-                 bg-white/10 hover:bg-white/20 backdrop-blur-md"
+                 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white"
     >
       ❮
     </button>
@@ -252,7 +252,7 @@ onError={(e) => e.target.style.backgroundColor = '#ddd'} // Fallback ถ้า�
         setCurrentIndex((prev) => (prev + 1) % menuImages.length)
       }
       className="hidden md:flex absolute right-6 p-4 rounded-full 
-                 bg-white/10 hover:bg-white/20 backdrop-blur-md"
+                 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white"
     >
       ❯
     </button>

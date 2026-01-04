@@ -249,13 +249,13 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Bungalow.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Bungalow/image1.jpg",
+            image: "/assets/image/Rooms/Bungalow/image2.jpg",
             title: "Bungalow House",
             subtitle: "Exterior",
             desc: "Cozy small bungalow 1 bedroom with private bathroom.",
           },
           {
-            image: "/assets/image/Rooms/Bungalow/image2.jpg",
+            image: "/assets/image/Rooms/Bungalow/image4.jpg",
             title: "Lovely wooden house at a budget-friendly price",
             subtitle: "Comfort",
             desc: "Perfect for travelers who want to experience the atmosphere of Doi Luang.",
@@ -457,7 +457,7 @@ export const contentData = {
             image: "/assets/image/Rooms/Sirilanna/image5.jpg",
             title: "วิวดอยหลวงอลัง",
             subtitle: "การอาบน้ำ",
-            desc: "บ้านพักที่่มองเห็นดอยหลวงเเบบเต็มตา",
+            desc: "บ้านพักที่มองเห็นดอยหลวงเเบบเต็มตา",
           },
           {
             image: "/assets/image/Rooms/Sirilanna/image1.jpg",
@@ -550,13 +550,13 @@ export const contentData = {
             desc: "บ้านไม้สไตล์ทรอปิคอล โอบล้อมด้วยสวนดอกไม้และรั้วขาวน่ารัก",
           },
           {
-            image: "/assets/image/Rooms/Leelawadee/image8.jpg",
+            image: "/assets/image/Rooms/Leelawadee/image2.jpg",
             title: "เตียงนอนน่ารัก 3 เตียง",
             subtitle: "พื้นที่",
             desc: "ตกแต่งด้วยโทนไม้ธรรมชาติ ผสมผสานผนังอิฐและแสงธรรมชาติรอบห้อง",
           },
           {
-            image: "/assets/image/Rooms/Leelawadee/image10.jpg",
+            image: "/assets/image/Rooms/Leelawadee/image3.jpg",
             title: "ชิงช้าไม้สุดเก๋",
             subtitle: "ประสบการณ์",
             desc: "แกว่งชิงช้า ชมดอยหลวงพร้อมมองลำธาร",
@@ -600,13 +600,13 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Bungalow.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Bungalow/image1.jpg",
+            image: "/assets/image/Rooms/Bungalow/image2.jpg",
             title: "บ้านบังกะโล",
             subtitle: "ภายนอก",
             desc: "บ้านพักน้อย ที่คอยผู้มาเยือน  1 ห้องนอน ห้องน้ำในตัว",
           },
           {
-            image: "/assets/image/Rooms/Bungalow/image2.jpg",
+            image: "/assets/image/Rooms/Bungalow/image4.jpg",
             title: "บ้านไม้น่ารัก ราคาสบายกระเป๋า",
             subtitle: "ความสบาย",
             desc: "บ้านพักสำหรับนักเดินทาง ที่อยากสัมผัสบรรยากาศดอยหลวง",
@@ -905,13 +905,13 @@ export const contentData = {
             desc: "热带风格木屋，被花园与可爱的白色围栏环绕",
           },
           {
-            image: "/assets/image/Rooms/Leelawadee/image8.jpg",
+            image: "/assets/image/Rooms/Leelawadee/image2.jpg",
             title: "三张温馨床铺",
             subtitle: "空间",
             desc: "木质色调搭配砖墙与自然采光",
           },
           {
-            image: "/assets/image/Rooms/Leelawadee/image10.jpg",
+            image: "/assets/image/Rooms/Leelawadee/image3.jpg",
             title: "特色木质秋千",
             subtitle: "体验",
             desc: "悠闲欣赏清道山与溪流美景",
@@ -955,13 +955,13 @@ export const contentData = {
         mainImage: "/assets/image/Rooms/Bungalow.jpg",
         gallery: [
           {
-            image: "/assets/image/Rooms/Bungalow/image1.jpg",
+            image: "/assets/image/Rooms/Bungalow/image2.jpg",
             title: "小木屋",
             subtitle: "外观",
             desc: "温馨小型平房一间卧室，独立卫浴",
           },
           {
-            image: "/assets/image/Rooms/Bungalow/image2.jpg",
+            image: "/assets/image/Rooms/Bungalow/image4.jpg",
             title: "可爱木屋，价格亲民",
             subtitle: "舒适",
             desc: "适合想要亲近清道山自然氛围的旅行者",

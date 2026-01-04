@@ -30,6 +30,15 @@ const Hero = () => {
     return () => (document.body.style.overflow = "");
   }, [openStory]);
 
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem("heyNowVisited");
+  
+    if (!hasVisited) {
+      setOpenStory(true);
+      sessionStorage.setItem("heyNowVisited", "true");
+    }
+  }, []);
+  
   return (
     <header className="relative h-screen w-full overflow-hidden flex items-end">
       <div className="absolute inset-0 z-0">
@@ -74,9 +83,14 @@ const Hero = () => {
             </motion.p>
 
             <motion.div variants={textVariants} className="flex flex-wrap gap-4">
-              <button className="bg-forest-600/90 backdrop-blur-sm text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase border border-white/20 hover:bg-forest-700 transition-all">
-                {content.hero.book}
-              </button>
+            <a
+              href="https://www.facebook.com/share/17qkwE3XuF/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-forest-600/90 backdrop-blur-sm text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase border border-white/20 hover:bg-forest-700 transition-all"
+            >
+              {content.hero.book}
+            </a>
              <button
                 onClick={() => setOpenStory(true)}
                 className="bg-white/5 text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase 

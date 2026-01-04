@@ -4,7 +4,7 @@ export const contentData = {
       story: "STORY",
       highlights: "HIGHLIGHTS",
       rooms: "ROOMS",
-      gallery: "GALLERY",
+      restaurant: "RESTAURANT",
       layout: "LAYOUT",
       location: "LOCATION",
       contact: "CONTACT",
@@ -12,7 +12,7 @@ export const contentData = {
 
     hero: {
       book: "BOOK A STAY",
-      ourstory: "OUR STORY",
+      ourstory: "Reservation Guide",
       subtitle:
         "Where mountains, flowers, mist, and flowing streams come together to cast a spell, allowing your body to truly rest.",
     },
@@ -296,31 +296,25 @@ export const contentData = {
     signatureDishes: [
       {
         id: 1,
-        name: "Slow-Cooked Jungle Curry",
-        nameTh: "แกงป่าเนื้อค่อย",
-        desc: "Served in a traditional clay pot with fresh herbs picked from our garden.",
-        descTh: "เสิร์ฟในหม้อดินเผา พร้อมสมุนไพรสดจากสวนของเรา",
-        price: "THB 350",
+        title: "Yellow Building ",
+        name: "Freshness you can see",
+        desc: "Fresh from the garden, straight to your plate Simple, clean, and pesticide-free.",
         image: "/assets/image/Restaurant/image1.jpg",
         icon: "sunset"
       },
       {
         id: 2,
+        title: "Signature Dish",
         name: "Northern Thai Set",
-        nameTh: "เซ็ตอาหารเช้าเหนือ",
-        desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
-        descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
-        price: "THB 280",
+        desc: "Authentic Lanna flavors Simple, comforting, and rich with local herbal aromas",
         image: "/assets/image/Restaurant/image2.jpg", // เปลี่ยนเป็นรูปจริง
         icon: "utensils"
       },
       {
         id: 3,
-        name: "Sunset Herbal Drink",
-        nameTh: "เครื่องดื่มสมุนไพรตะวันลับ",
-        desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
-        descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
-        price: "THB 120",
+        title: "Signature Drink",
+        name: "Hey now Mint Soo",
+        desc: "Experience refreshing drinks, Hey Now style Naturally fresh, easy to drink, relaxing at any moment",
         image: "/assets/image/Restaurant/image3.jpg",
         icon: "coffee"
       }
@@ -376,14 +370,14 @@ export const contentData = {
       story: "เรื่องราว",
       highlights: "ไฮไลต์",
       rooms: "ห้องพัก",
-      gallery: "แกลเลอรี่",
+      restaurant: "ร้านอาหาร",
       layout: "ผังโครงการ",
       location: "ที่ตั้ง",
       contact: "ติดต่อเรา",
     },
     hero: {
       book: "จองที่พัก",
-      ourstory: "เรื่องราวของเรา",
+      ourstory: "ขั้นตอนการจอง",
       subtitle:
         "ที่ซึ่งภูเขา ดอกไม้  สายหมอก และลำธาร  ร่วมกันร่ายมนตร์ให้ร่างกายได้หยุดพัก",
     },
@@ -653,31 +647,25 @@ export const contentData = {
     signatureDishes: [
       {
         id: 1,
-        name: "Slow-Cooked Jungle Curry",
-        nameTh: "แกงป่าเนื้อค่อย",
-        desc: "Served in a traditional clay pot with fresh herbs picked from our garden.",
-        descTh: "เสิร์ฟในหม้อดินเผา พร้อมสมุนไพรสดจากสวนของเรา",
-        price: "THB 350",
+        title: "ตึกเหลืองแห่งความสุข ",
+        name: "ความสดที่คุณมองเห็นได้",
+        desc: "ผักสดจากสวน ส่งตรงถึงจาน เรียบง่าย สะอาด และปลอดสารพิษ",
         image: "/assets/image/Restaurant/image1.jpg",
         icon: "sunset"
       },
       {
         id: 2,
-        name: "Northern Thai Set",
-        nameTh: "เซ็ตอาหารเช้าเหนือ",
-        desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
-        descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
-        price: "THB 280",
+        title: "เมนูซิกเนเจอร์",
+        name: "ชุดอาหารเหนือ",
+        desc: "รสชาติดั้งเดิมแบบล้านนา เรียบง่าย อบอุ่น และหอมกลิ่นสมุนไพรพื้นบ้าน",
         image: "/assets/image/Restaurant/image2.jpg", // เปลี่ยนเป็นรูปจริง
         icon: "utensils"
       },
       {
         id: 3,
-        name: "Sunset Herbal Drink",
-        nameTh: "เครื่องดื่มสมุนไพรตะวันลับ",
-        desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
-        descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
-        price: "THB 120",
+        title: "เครื่องดื่มซิกเนเจอร์",
+        name: "Hey now Mint Soo",
+        desc: "สัมผัสเครื่องดื่มสดชื่น สไตล์ Hey Now สดใสจากธรรมชาติ ดื่มง่าย ผ่อนคลายทุกช่วงเวลา",
         image: "/assets/image/Restaurant/image3.jpg",
         icon: "coffee"
       }
@@ -733,14 +721,14 @@ export const contentData = {
       story: "故事",
       highlights: "亮点",
       rooms: "房间",
-      gallery: "画廊",
+      restaurant: "餐厅",
       layout: "布局",
       location: "位置",
       contact: "联系我们",
     },
     hero: {
       book: "预订住宿",
-      ourstory: "我们的故事",
+      ourstory: "预订流程",
       subtitle: "在这里，群山、花朵、薄雾与溪流共同施展魔法，让身心得以真正停歇。",
     },
     story: {
@@ -1013,31 +1001,26 @@ export const contentData = {
     signatureDishes: [
       {
         id: 1,
-        name: "Slow-Cooked Jungle Curry",
-        nameTh: "แกงป่าเนื้อค่อย",
-        desc: "Served in a traditional clay pot with fresh herbs picked from our garden.",
-        descTh: "เสิร์ฟในหม้อดินเผา พร้อมสมุนไพรสดจากสวนของเรา",
+        title: "黄色建筑 ",
+        name: "看得见的新鲜",
+        desc: "新鲜直送，从菜园到餐桌, 简单、干净、无农药",
         price: "THB 350",
         image: "/assets/image/Restaurant/image1.jpg",
         icon: "sunset"
       },
       {
         id: 2,
-        name: "Northern Thai Set",
-        nameTh: "เซ็ตอาหารเช้าเหนือ",
-        desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
-        descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
-        price: "THB 280",
+        title: "招牌菜 ",
+        name: "泰北料理套餐",
+        desc: "朴实温暖，散发着本地香草的芬芳",
         image: "/assets/image/Restaurant/image2.jpg", // เปลี่ยนเป็นรูปจริง
         icon: "utensils"
       },
       {
         id: 3,
-        name: "Sunset Herbal Drink",
-        nameTh: "เครื่องดื่มสมุนไพรตะวันลับ",
-        desc: "A blend of butterfly pea flowers and lemongrass, best enjoyed while watching the sunset.",
-        descTh: "ผสมผสานดอกอัญชันและตะไคร้ ดื่มด่ำพร้อมชมพระอาทิตย์ตก",
-        price: "THB 120",
+        title: "招牌饮品 ",
+        name: "Hey now Mint Soo",
+        desc: "感受 Hey Now 风格的清爽饮品 源自自然，清新顺口，放松每一刻",
         image: "/assets/image/Restaurant/image3.jpg",
         icon: "coffee"
       }

@@ -113,7 +113,7 @@ onError={(e) => e.target.style.backgroundColor = '#ddd'} // Fallback ถ้า�
 <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
 <div className="flex items-center gap-3 text-[#A89F91] mb-2">
 {iconMap[dish.icon]}
-<span className="text-xs font-bold tracking-widest uppercase">Signature Dish</span>
+<span className="text-xs font-bold tracking-widest uppercase">{dish.title}</span>
 </div>
 
 <h3 className="font-['Cormorant_Garamond',serif] text-3xl md:text-5xl text-[#3E3832] leading-tight">

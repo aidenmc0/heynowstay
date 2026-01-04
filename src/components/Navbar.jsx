@@ -5,9 +5,9 @@ import { useLanguage } from "../contexts/LanguageContext";
 // --- ตรวจสอบตรงนี้ให้แน่ใจว่ามีครบทุกภาษา ---
 const navLinks = [
   "Story",
+  "Highlights",
   "Rooms",
   "Restaurant",
-  "Booking",
   "Layout",
   "Location",
   "Contact",

@@ -9,7 +9,16 @@ const Restaurant = () => {
 // ใช้ Context เพื่อดึงหัวข้อ (ถ้ามี)
 const { content } = useLanguage();
 const [activeImage, setActiveImage] = useState(null);
-
+const menuImages = [
+    "/assets/image/Restaurant/image1.jpg",
+    "/assets/image/Restaurant/image2.jpg",
+    "/assets/image/Restaurant/image3.jpg",
+    "/assets/image/Restaurant/image4.jpg",
+    "/assets/image/Restaurant/image5.jpg",
+  ];
+  
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 const iconMap = {
 coffee: <Coffee size={16} />,
 utensils: <Utensils size={16} />,
@@ -146,6 +155,106 @@ onError={(e) => e.target.style.backgroundColor = '#ddd'} // Fallback ถ้า�
     </button>
   </motion.div>
 )}
+
+<div className="mt-24 pt-16 border-t border-[#E8E0D5] text-center">
+<motion.button
+        onClick={() => {
+            setCurrentIndex(0);
+            setIsGalleryOpen(true);
+        }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative overflow-hidden max-w-md mx-auto bg-[#3E3832] text-[#FAF8F5] py-5 px-8 rounded-full shadow-[0_10px_30px_-10px_rgba(62,56,50,0.1)] hover:shadow-[0_20px_50px_-10px_rgba(62,56,50,0.2)] transition-all duration-500"
+              >
+                <span className="relative z-10 flex items-center gap-3 text-lg font-medium tracking-widest uppercase">
+                   View Full Menu
+                   {/* Arrow Icon */}
+                   <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                   </svg>
+                </span>
+                {/* Shine Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              </motion.button>
+          </div>
+          {isGalleryOpen && (
+  <motion.div
+    className="fixed inset-0 z-[60] bg-[#1C1A18]/95 backdrop-blur-xl 
+               flex items-center justify-center"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+  >
+    {/* Close */}
+    <button
+      onClick={() => setIsGalleryOpen(false)}
+      className="absolute top-6 right-6 p-3 rounded-full 
+                 bg-white/10 hover:bg-white/20 
+                 backdrop-blur-md border border-white/10 
+                 transition-all group"
+    >
+      <X size={22} className="text-white group-hover:rotate-90 transition-transform" />
+    </button>
+
+    {/* Left Arrow (Desktop) */}
+    <button
+      onClick={() =>
+        setCurrentIndex((prev) => (prev === 0 ? menuImages.length - 1 : prev - 1))
+      }
+      className="hidden md:flex absolute left-6 p-4 rounded-full 
+                 bg-white/10 hover:bg-white/20 backdrop-blur-md"
+    >
+      ❮
+    </button>
+
+    {/* Image */}
+    <motion.img
+      key={currentIndex}
+      src={menuImages[currentIndex]}
+      className="max-h-[85vh] max-w-[90vw] object-contain rounded-md shadow-2xl"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.2}
+      onDragEnd={(e, info) => {
+        if (info.offset.x < -100) {
+          setCurrentIndex((prev) => (prev + 1) % menuImages.length);
+        }
+        if (info.offset.x > 100) {
+          setCurrentIndex((prev) =>
+            prev === 0 ? menuImages.length - 1 : prev - 1
+          );
+        }
+      }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    />
+
+    {/* Right Arrow (Desktop) */}
+    <button
+      onClick={() =>
+        setCurrentIndex((prev) => (prev + 1) % menuImages.length)
+      }
+      className="hidden md:flex absolute right-6 p-4 rounded-full 
+                 bg-white/10 hover:bg-white/20 backdrop-blur-md"
+    >
+      ❯
+    </button>
+
+    {/* Indicator */}
+    <div className="absolute bottom-8 flex gap-2">
+      {menuImages.map((_, i) => (
+        <span
+          key={i}
+          className={`w-2 h-2 rounded-full transition-all ${
+            i === currentIndex ? "bg-white" : "bg-white/30"
+          }`}
+        />
+      ))}
+    </div>
+  </motion.div>
+)}
+
 </section>
 );
 };

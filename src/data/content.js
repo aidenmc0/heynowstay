@@ -49,7 +49,7 @@ export const contentData = {
         id: 1,
         name: "Phruay House",
         desc: "A private hideaway by the water, designed for reflection and peace.",
-        mainImage: "/assets/image/Price/Phruay.jpg",
+        mainImage: "/assets/image/Rooms/Phruay.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Phruay/image8.jpg",
@@ -77,7 +77,7 @@ export const contentData = {
         id: 2,
         name: "Sirilanna House",
         desc: "The epitome of rustic luxury, featuring an open-air bathroom and exquisite details.",
-        mainImage: "/assets/image/Price/Sirilanna.jpg",
+        mainImage: "/assets/image/Rooms/Sirilanna.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Sirilanna/image2.jpg",
@@ -105,7 +105,7 @@ export const contentData = {
         id: 3,
         name: "Daramanee House",
         desc: "Listen to the gentle flow of the stream. A cozy, intimate setting perfect for deep rest.",
-        mainImage: "/assets/image/Price/Daramanee.jpg",
+        mainImage: "/assets/image/Rooms/Daramanee.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Daramanee/image7.jpg",
@@ -139,7 +139,7 @@ export const contentData = {
         id: 4,
         name: "Ban Chuen House",
         desc: "Nestled among ancient trees, this room offers a private view of the morning mist rising from the valley.",
-        mainImage: "/assets/image/Price/Banchuen.jpg",
+        mainImage: "/assets/image/Rooms/Banchuen.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Banchuen/image5.jpg",
@@ -178,7 +178,7 @@ export const contentData = {
         id: 5,
         name: "Leelawadee House",
         desc: "An expansive retreat blending traditional Thai architecture with modern amenities.",
-        mainImage: "/assets/image/Price/Leelawadee.jpg",
+        mainImage: "/assets/image/Rooms/Leelawadee.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Leelawadee/image1.jpg",
@@ -206,7 +206,7 @@ export const contentData = {
         id: 6,
         name: "Katria House",
         desc: "Nestled among ancient trees, offering panoramic views of the limestone mountains.",
-        mainImage: "/assets/image/Price/Katria.jpg",
+        mainImage: "/assets/image/Rooms/Katria.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Katria/image5.jpg",
@@ -234,7 +234,7 @@ export const contentData = {
         id: 7,
         name: "Bungalow House",
         desc: "A spacious retreat with an outdoor soaking tub. Watch the stars emerge over the Doi Luang peak.",
-        mainImage: "/assets/image/Price/Bungalow.jpg",
+        mainImage: "/assets/image/Rooms/Bungalow.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Bungalow/image1.jpg",
@@ -262,10 +262,10 @@ export const contentData = {
         id: 8,
         name: "Camping Area",
         desc: "Sleep under the canopy of stars in our luxury canvas tents. The ultimate glamping experience.",
-        mainImage: "/assets/image/Price/Camping.jpg",
+        mainImage: "/assets/image/Rooms/Camping.jpg",
         gallery: [
           {
-            image: "/assets/image/Price/Camping.jpg",
+            image: "/assets/image/Rooms/Camping.jpg",
             title: "Camping Area",
             subtitle: "Overview",
             desc: "Sleep under the canopy of stars in our luxury canvas tents. The ultimate glamping experience.",
@@ -377,7 +377,7 @@ export const contentData = {
         id: 1,
         name: "บ้านพรวย",
         desc: "ที่หลบซ่อนอยู่ริมน้ำ ออกแบบมาเพื่อการไตรรจึ้งและความสงบ",
-        mainImage: "/assets/image/Price/Phruay.jpg",
+        mainImage: "/assets/image/Rooms/Phruay.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Phruay/image8.jpg",
@@ -405,7 +405,7 @@ export const contentData = {
         id: 2,
         name: "บ้านสิริลัลนนา",
         desc: "จุดเด่นของความหรูหราแบบโรงนา มีห้องน้ำแบบเปิดและรายละเอียดที่งดงเลยยิ่ง",
-        mainImage: "/assets/image/Price/Sirilanna.jpg",
+        mainImage: "/assets/image/Rooms/Sirilanna.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Sirilanna/image2.jpg",
@@ -433,7 +433,7 @@ export const contentData = {
         id: 3,
         name: "บ้านดารามนี",
         desc: "ฟังเสียงลำธาร์ไหลผ่านอย่างเบาๆ บรรยากาศกับบ้านเล็กๆ อันเงียบสงบ เหมาะสำหรับการพักผ่อนอย่างลึกลึก",
-        mainImage: "/assets/image/Price/Daramanee.jpg",
+        mainImage: "/assets/image/Rooms/Daramanee.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Daramanee/image7.jpg",
@@ -467,7 +467,7 @@ export const contentData = {
         id: 4,
         name: "บ้านบัญชน",
         desc: "ตั้งอยู่ในร่มเย็นของต้นไม้เก่าแก่ ห้องพักนี้มอบมองเห็นหมอกหนาวที่ลอยขึ้นจากหุบเขา",
-        mainImage: "/assets/image/Price/Banchuen.jpg",
+        mainImage: "/assets/image/Rooms/Banchuen.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Banchuen/image5.jpg",
@@ -501,7 +501,7 @@ export const contentData = {
         id: 5,
         name: "บ้านลีลาวดี",
         desc: "พื้นที่พักที่กว้างขวางพร้อมความสะดวกยุคนิยม ผสมผสานสไตล์ไทยกับสิ่งอำนวยความสะดวก",
-        mainImage: "/assets/image/Price/Leelawadee.jpg",
+        mainImage: "/assets/image/Rooms/Leelawadee.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Leelawadee/image1.jpg",
@@ -529,7 +529,7 @@ export const contentData = {
         id: 6,
         name: "บ้านแคทรียา",
         desc: "ตั้งอยู่ท่ามกลางในร่มไม้เก่าแก่ มองเห็นวิวภูเขาหินปูนแบบทิวทิวทิว",
-        mainImage: "/assets/image/Price/Katria.jpg",
+        mainImage: "/assets/image/Rooms/Katria.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Katria/image5.jpg",
@@ -557,7 +557,7 @@ export const contentData = {
         id: 7,
         name: "บังกะโล",
         desc: "พื้นที่กว้างขวางพร้อมอ่างน้ำแช่แบบกลางแจ้ง ชมดาวพลบเหนือยอดภูเขาหลวง",
-        mainImage: "/assets/image/Price/Bungalow.jpg",
+        mainImage: "/assets/image/Rooms/Bungalow.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Bungalow/image1.jpg",
@@ -585,10 +585,10 @@ export const contentData = {
         id: 8,
         name: "โซนแคมป์ปิ้ง",
         desc: "นอนใต้แสงดาวในเต็นท์ผ้าใบหรูหรา ประสบการณ์แคมปปิ้งอันลงตัว",
-        mainImage: "/assets/image/Price/Camping.jpg",
+        mainImage: "/assets/image/Rooms/Camping.jpg",
         gallery: [
           {
-            image: "/assets/image/Price/Camping.jpg",
+            image: "/assets/image/Rooms/Camping.jpg",
             title: "โซนแคมป์ปิ้ง",
             subtitle: "ภาพรวม",
             desc: "นอนใต้แสงดาวในเต็นท์ผ้าใบหรูหรา ประสบการณ์แคมปปิ้งอันลงตัว",
@@ -698,7 +698,7 @@ export const contentData = {
         id: 1,
         name: "普莱府",
         desc: "水边的私人隐蔽处，专为反思和平静而设计。",
-        mainImage: "/assets/image/Price/Phruay.jpg",
+        mainImage: "/assets/image/Rooms/Phruay.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Phruay/image8.jpg",
@@ -726,7 +726,7 @@ export const contentData = {
         id: 2,
         name: "西莉安娜府",
         desc: "乡村奢华的缩影，配有露天浴室和精致的细节。",
-        mainImage: "/assets/image/Price/Sirilanna.jpg",
+        mainImage: "/assets/image/Rooms/Sirilanna.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Sirilanna/image2.jpg",
@@ -754,7 +754,7 @@ export const contentData = {
         id: 3,
         name: "达拉玛尼府",
         desc: "聆听溪流的轻柔声音。一个舒适亲密的环境，非常适合深度休息。",
-        mainImage: "/assets/image/Price/Daramanee.jpg",
+        mainImage: "/assets/image/Rooms/Daramanee.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Daramanee/image7.jpg",
@@ -788,7 +788,7 @@ export const contentData = {
         id: 4,
         name: "班淳府",
         desc: "坐落于古树之间，这个房间可俯瞰晨雾从山谷升起的景色。",
-        mainImage: "/assets/image/Price/Banchuen.jpg",
+        mainImage: "/assets/image/Rooms/Banchuen.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Banchuen/image5.jpg",
@@ -822,7 +822,7 @@ export const contentData = {
         id: 5,
         name: "利拉瓦迪府",
         desc: "一个宽敞的度假地，融合了传统泰式建筑与现代设施。",
-        mainImage: "/assets/image/Price/Leelawadee.jpg",
+        mainImage: "/assets/image/Rooms/Leelawadee.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Leelawadee/image1.jpg",
@@ -850,7 +850,7 @@ export const contentData = {
         id: 6,
         name: "卡翠亚府",
         desc: "坐落于古树之中，提供石灰岩山脉的全景视野。",
-        mainImage: "/assets/image/Price/Katria.jpg",
+        mainImage: "/assets/image/Rooms/Katria.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Katria/image5.jpg",
@@ -878,7 +878,7 @@ export const contentData = {
         id: 7,
         name: "平房",
         desc: "一个宽敞的度假地，配有户外浸泡浴缸。看着星星出现在Doi Luang峰上。",
-        mainImage: "/assets/image/Price/Bungalow.jpg",
+        mainImage: "/assets/image/Rooms/Bungalow.jpg",
         gallery: [
           {
             image: "/assets/image/Rooms/Bungalow/image1.jpg",
@@ -906,10 +906,10 @@ export const contentData = {
         id: 8,
         name: "露营区",
         desc: "在我们的豪华帆布帐篷下睡在星空下。极致的露营体验。",
-        mainImage: "/assets/image/Price/Camping.jpg",
+        mainImage: "/assets/image/Rooms/Camping.jpg",
         gallery: [
           {
-            image: "/assets/image/Price/Camping.jpg",
+            image: "/assets/image/Rooms/Camping.jpg",
             title: "露营区",
             subtitle: "外观",
             desc: "在我们的豪华帆布帐篷下睡在星空下。极致的露营体验。",

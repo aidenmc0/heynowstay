@@ -23,7 +23,7 @@ const Footer = () => {
         {/* ===== Contact Actions ===== */}
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <a
-            href="tel:0846120772"
+            href="tel:0822320083"
             className="
             bg-white/10 backdrop-blur-sm text-white
               px-10 py-4 rounded-full
@@ -38,9 +38,9 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://line.me/ti/p/XXXXXXXX"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="https://www.facebook.com/share/17qkwE3XuF/"
+              target="_blank"
+              rel="noopener noreferrer"
             className="
               bg-white/10 backdrop-blur-sm text-white
               px-10 py-4 rounded-full

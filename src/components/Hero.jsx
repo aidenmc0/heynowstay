@@ -1,5 +1,6 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion"; // เพิ่ม import นี้
+import { useState, useEffect } from "react";
 
 // Animation Variants สำหรับการค่อยๆ ขึ้นของแต่ละส่วน
 const textVariants = {
@@ -22,6 +23,12 @@ const containerVariants = {
 
 const Hero = () => {
   const { content } = useLanguage();
+  const [openStory, setOpenStory] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = openStory ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
+  }, [openStory]);
 
   return (
     <header className="relative h-screen w-full overflow-hidden flex items-end">
@@ -70,13 +77,90 @@ const Hero = () => {
               <button className="bg-forest-600/90 backdrop-blur-sm text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase border border-white/20 hover:bg-forest-700 transition-all">
                 {content.hero.book}
               </button>
-              <button className="bg-white/5 text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase border border-white/30 backdrop-blur-sm hover:bg-white/10 transition-all">
+             <button
+                onClick={() => setOpenStory(true)}
+                className="bg-white/5 text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase 
+                          border border-white/30 backdrop-blur-sm 
+                          hover:bg-white/10 transition-all"
+              >
                 {content.hero.ourstory}
               </button>
             </motion.div>
           </div>
         </motion.div>
       </div>
+
+      {openStory && (
+      <motion.div
+        className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center px-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setOpenStory(false)}
+      >
+        {/* Modal Card */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          onClick={(e) => e.stopPropagation()}
+          className="relative max-w-lg w-full bg-[#FAF8F5] rounded-2xl 
+                    px-8 py-10 md:px-12 md:py-14 
+                    shadow-[0_40px_80px_-20px_rgba(0,0,0,0.25)]"
+        >
+          {/* Close */}
+          <button
+            onClick={() => setOpenStory(false)}
+            className="absolute top-4 right-4 text-[#3E3832]/50 hover:text-[#3E3832] transition"
+          >
+            ✕
+          </button>
+
+          {/* Content */}
+          <div className="space-y-6 text-[#3E3832]">
+            <h3 className="font-serif text-2xl md:text-3xl leading-snug">
+              สวัสดีค่ะ <br />
+              ยินดีต้อนรับสู่ <i>Hey Now</i>
+            </h3>
+
+            <p className="font-light leading-relaxed text-[#6B6359]">
+              เพื่อความสะดวกและรวดเร็วในการจอง  
+              กรุณาดำเนินการตามขั้นตอนดังนี้ค่ะ
+            </p>
+
+            <div className="space-y-4 text-sm leading-relaxed text-[#5D4C5B]">
+              <p className="font-medium tracking-wide uppercase text-[#3E3832]">
+                ขั้นตอนการจองบ้านพัก / ลานกางเต็นท์
+              </p>
+
+              <ol className="space-y-3 list-decimal list-inside">
+                <li>
+                  เข้าชมเว็บไซต์ของเรา เพื่อดูรายละเอียดบ้านพัก บรรยากาศ และวันว่าง
+                </li>
+                <li>
+                  เลือกวันว่างที่ต้องการเข้าพักจากรูปที่แนบ และชื่อบ้านพัก / ลานกางเต็นท์
+                </li>
+                <li>
+                  จากนั้นทักกลับมาที่เพจ พร้อมแจ้งข้อมูล:
+                  <div className="mt-2 ml-4 space-y-1">
+                    <div>ชื่อ :</div>
+                    <div>Tel :</div>
+                    <div>Check-in :</div>
+                    <div>บ้านพัก / Camp :</div>
+                  </div>
+                </li>
+              </ol>
+
+              <p className="pt-4 text-[#6B6359] italic">
+                ทีมงานจะตรวจสอบวันว่างและติดต่อกลับ  
+                เพื่อยืนยันการจองโดยเร็วที่สุดค่ะ 🤍
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    )}
+
     </header>
   );
 };

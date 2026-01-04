@@ -300,12 +300,12 @@ export const contentData = {
       },
       {
         id: 2,
-        name: "Northern Thai Breakfast Set",
+        name: "Northern Thai Set",
         nameTh: "เซ็ตอาหารเช้าเหนือ",
         desc: "House-made sticky rice, organic fried egg from our farm, and spicy pork dipping sauce.",
         descTh: "ข้าวเหนียวเมียวมะขาม, ไข่ไก่ทรงเครื่อง, และน้ำพริกหมูป่า",
         price: "THB 280",
-        image: "/assets/image/Food/breakfast.jpg", // เปลี่ยนเป็นรูปจริง
+        image: "/assets/image/Restaurant/image2.jpg", // เปลี่ยนเป็นรูปจริง
         icon: "utensils"
       },
       {

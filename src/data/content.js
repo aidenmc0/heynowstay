@@ -278,9 +278,9 @@ export const contentData = {
           },
           {
             image: "/assets/image/Rooms/Camping/image2.jpg",
-            title: "Peaceful atmosphere with an international vibe",
+            title: "Peaceful atmosphere ",
             subtitle: "Stars",
-            desc: "Flowers, ponds, streams, and Doi Luang scenery.",
+            desc: "With an international vibe flowers, ponds, streams, and Doi Luang scenery.",
           },
           {
             image: "/assets/image/Rooms/Camping/image3.jpg",

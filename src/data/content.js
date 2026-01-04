@@ -691,7 +691,7 @@ export const contentData = {
         id: 3,
         title: "สวนผักออร์แกนิก",
         desc: "ผักสดจากสวนของเรา เก็บใหม่วันต่อวัน เสิร์ฟตรงถึงโต๊ะอาหาร เพื่อผู้เข้าพักที่เราอยากดูแลเป็นพิเศษ",
-        img: "/assets/image/Highlight/image1.jpg",
+        img: "/assets/image/Highlight/image11.jpg",
       },
       {
         id: 4,
@@ -1046,7 +1046,7 @@ export const contentData = {
         id: 3,
         title: "现摘有机蔬菜",
         desc: "新鲜蔬菜每日采摘， 从花园直达餐桌，只为我们珍贵的住客。",
-        img: "/assets/image/Highlight/image1.jpg",
+        img: "/assets/image/Highlight/image11.jpg",
       },
       {
         id: 4,

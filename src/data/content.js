@@ -15,7 +15,20 @@ export const contentData = {
       ourstory: "Reservation Guide",
       subtitle:
         "Where mountains, flowers, mist, and flowing streams come together to cast a spell, allowing your body to truly rest.",
-    },
+      modal: {
+        title: "Hello,\nWelcome to Hey Now 🤍",
+        intro:
+          "To ensure a smooth and efficient booking process, please kindly follow the steps below:",
+        stepTitle: "Booking Steps for Accommodation / Camping Area",
+        steps: [
+          "Visit our website https://heynowstay.vercel.app/ to view accommodation details, atmosphere, and stay options.",
+          "Select your preferred check-in date from the availability calendar in the attached images, and specify the accommodation type or camping area you are interested in.",
+          "Please message us back via this page with the following information:\nGuest name:\nNumber of guests:\nPhone number:\nCheck-in date:\nAccommodation / Camping area:"
+        ],
+        footer:
+          "Our team will check availability and contact you shortly to confirm your reservation. 🤍✨"
+      }
+      },
 
     story: {
       title: "Lan Dao Stream... a quiet reminder of what truly matters.",
@@ -380,7 +393,20 @@ export const contentData = {
       ourstory: "ขั้นตอนการจอง",
       subtitle:
         "ที่ซึ่งภูเขา ดอกไม้  สายหมอก และลำธาร  ร่วมกันร่ายมนตร์ให้ร่างกายได้หยุดพัก",
-    },
+      modal: {
+        title: "สวัสดีค่ะ\nยินดีต้อนรับสู่ Hey Now",
+        intro:
+          "เพื่อความสะดวกและรวดเร็วในการสำรองที่พัก ขอความกรุณาดำเนินการตามขั้นตอนดังต่อไปนี้ค่ะ",
+        stepTitle: "ขั้นตอนการจองบ้านพัก / ลานกางเต็นท์",
+        steps: [
+          "เข้าชมเว็บไซต์ของเรา\nhttps://heynowstay.vercel.app/\nเพื่อดูรายละเอียดบ้านพัก บรรยากาศ และรูปแบบการเข้าพัก",
+          "เลือกวันเข้าพักที่ต้องการจากปฏิทินวันว่างในรูปที่แนบ พร้อมระบุชื่อบ้านพัก หรือโซนลานกางเต็นท์ที่สนใจ",
+          "ทักกลับมาที่เพจ พร้อมแจ้งข้อมูลดังต่อไปนี้:\nชื่อผู้จอง:\nจำนวน:\nเบอร์โทรศัพท์:\nวันที่เข้าพัก (Check-in):\nชื่อบ้านพัก / ลานกางเต็นท์:"
+        ],
+        footer:
+          "ทีมงานจะตรวจสอบวันว่างและติดต่อกลับเพื่อยืนยันการจองโดยเร็วที่สุดค่ะ 🤍"
+      }
+      },
     story: {
       title: "ลำธารล้านดาว… เรื่องเล็กๆ ที่พาใจกลับไปสู่ความหมายที่ยิ่งใหญ่",
       text1:
@@ -730,6 +756,20 @@ export const contentData = {
       book: "预订住宿",
       ourstory: "预订流程",
       subtitle: "在这里，群山、花朵、薄雾与溪流共同施展魔法，让身心得以真正停歇。",
+      modal: {
+        title: "您好，\n欢迎来到 Hey Now 🤍",
+        intro:
+          "为了方便并加快您的预订流程，请您按照以下步骤进行预订：",
+        stepTitle: "住宿 / 露营区 预订流程",
+        steps: [
+          "请访问我们的网站 https://heynowstay.vercel.app/ 查看住宿详情、环境氛围及入住方式。",
+          "请从附图中的可预订日历选择您希望入住的日期，并注明您感兴趣的房型或露营区域。",
+          "请通过本页面回复并提供以下信息：\n预订人姓名：\n入住人数：\n联系电话：\n入住日期（Check-in）：\n房型 / 露营区域："
+        ],
+        footer:
+          "我们的团队将为您核对空房情况，并尽快与您联系以确认预订。🤍✨"
+      }
+    
     },
     story: {
       title: "星辰溪流（Lam Than Lan Dao） 静谧之中，回归生命本真。",

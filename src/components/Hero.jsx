@@ -22,7 +22,7 @@ const containerVariants = {
 };
 
 const Hero = () => {
-  const { content } = useLanguage();
+  const { content, lang, changeLanguage } = useLanguage();
   const [openStory, setOpenStory] = useState(false);
 
   useEffect(() => {
@@ -118,10 +118,37 @@ const Hero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           onClick={(e) => e.stopPropagation()}
-          className="relative max-w-lg w-full bg-[#FAF8F5] rounded-2xl 
-                    px-8 py-10 md:px-12 md:py-14 
-                    shadow-[0_40px_80px_-20px_rgba(0,0,0,0.25)]"
+          className="
+            relative w-full max-w-md md:max-w-lg
+            bg-[#FAF8F5] rounded-2xl
+            px-6 py-12
+            md:px-12 md:py-14
+            max-h-[85vh] overflow-y-auto
+            shadow-[0_40px_80px_-20px_rgba(0,0,0,0.25)]
+          "
         >
+          {/* Language Switcher */}
+          <div className="absolute top-4 left-4 flex gap-1 z-10">
+            {[
+              { code: "th", label: "TH" },
+              { code: "en", label: "EN" },
+              { code: "cn", label: "中文" }
+            ].map((l) => (
+              <button
+                key={l.code}
+                onClick={() => changeLanguage(l.code)}
+                className={`px-3 py-1 rounded-full text-xs tracking-wide transition
+                  ${
+                    lang === l.code
+                      ? "bg-[#3E3832] text-white"
+                      : "bg-white text-[#3E3832] border border-[#D8D2C8] hover:bg-[#EFEAE3]"
+                  }`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+
           {/* Close */}
           <button
             onClick={() => setOpenStory(false)}
@@ -132,42 +159,29 @@ const Hero = () => {
 
           {/* Content */}
           <div className="space-y-6 text-[#3E3832]">
-            <h3 className="font-serif text-2xl md:text-3xl leading-snug">
-              สวัสดีค่ะ <br />
-              ยินดีต้อนรับสู่ <i>Hey Now</i>
+            <h3 className="font-serif text-2xl md:text-3xl leading-snug whitespace-pre-line">
+              {content.hero.modal.title}
             </h3>
 
-            <p className="font-light leading-relaxed text-[#6B6359]">
-              เพื่อความสะดวกและรวดเร็วในการจอง  
-              กรุณาดำเนินการตามขั้นตอนดังนี้ค่ะ
-            </p>
+          <p className="font-light leading-relaxed text-[#6B6359]">
+            {content.hero.modal.intro}
+          </p>
 
             <div className="space-y-4 text-sm leading-relaxed text-[#5D4C5B]">
               <p className="font-medium tracking-wide uppercase text-[#3E3832]">
-                ขั้นตอนการจองบ้านพัก / ลานกางเต็นท์
+                {content.hero.modal.stepTitle}
               </p>
 
               <ol className="space-y-3 list-decimal list-inside">
-                <li>
-                  เข้าชมเว็บไซต์ของเรา เพื่อดูรายละเอียดบ้านพัก บรรยากาศ และวันว่าง
-                </li>
-                <li>
-                  เลือกวันว่างที่ต้องการเข้าพักจากรูปที่แนบ และชื่อบ้านพัก / ลานกางเต็นท์
-                </li>
-                <li>
-                  จากนั้นทักกลับมาที่เพจ พร้อมแจ้งข้อมูล:
-                  <div className="mt-2 ml-4 space-y-1">
-                    <div>ชื่อ :</div>
-                    <div>Tel :</div>
-                    <div>Check-in :</div>
-                    <div>บ้านพัก / Camp :</div>
-                  </div>
-                </li>
+                {content.hero.modal.steps.map((step, i) => (
+                  <li key={i} className="whitespace-pre-line">
+                    {step}
+                  </li>
+                ))}
               </ol>
 
               <p className="pt-4 text-[#6B6359] italic">
-                ทีมงานจะตรวจสอบวันว่างและติดต่อกลับ  
-                เพื่อยืนยันการจองโดยเร็วที่สุดค่ะ 🤍
+                {content.hero.modal.footer}
               </p>
             </div>
           </div>

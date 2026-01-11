@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
+import { Analytics } from "@vercel/analytics/react"; // Import เข้ามา
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Story from "./components/Story";
@@ -46,6 +48,7 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <LanguageProvider>
         <AppContent />
       </LanguageProvider>

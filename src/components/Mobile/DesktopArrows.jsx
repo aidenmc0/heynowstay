@@ -30,11 +30,6 @@ export default function DesktopArrows({ onPrev, onNext, currentIndex, total }) {
       >
         <ChevronRight size={24} />
       </button>
-
-      {/* Indicator Text (Optional): แสดงว่าอยู่ที่ไหน */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40 text-[10px] tracking-[0.3em] uppercase">
-        Desktop View • Use Arrows to Navigate
-      </div>
     </div>
   );
 }

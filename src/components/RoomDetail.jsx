@@ -7,6 +7,8 @@ import { X } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext"; 
 import StoryCard from "./Mobile/StoryCard";
 import GodRay from "./Background/GodRay";
+// Import DesktopArrows ที่คุณสร้างไว้ (เช็ค path ให้ถูกต้องนะครับ)
+import DesktopArrows from "./Mobile/DesktopArrows"; 
 
 const RoomDetail = () => {
   const { id } = useParams();
@@ -75,6 +77,21 @@ const RoomDetail = () => {
     return () => observer.disconnect();
   }, [room]);
 
+  // --- 5. Navigation Functions สำหรับ DesktopArrows ---
+  const handlePrev = () => {
+    if (activeSlideIndex > 0) {
+      const target = containerRef.current?.children[activeSlideIndex - 1];
+      target?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+    }
+  };
+
+  const handleNext = () => {
+    if (activeSlideIndex < slides.length - 1) {
+      const target = containerRef.current?.children[activeSlideIndex + 1];
+      target?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+    }
+  };
+
   const handleClose = () => {
     navigate('/');
     setTimeout(() => {
@@ -135,10 +152,6 @@ const RoomDetail = () => {
 
 
       {/* ================= CENTER LAYER: The Story (Photo Viewer) ================= */}
-      {/* 
-          <--- FIX: ลบ 'h-full min-h-0' ออก ให้เหลือแค่ 'flex-1' 
-          เพื่อให้ Flexbox คำนวณความสูงอัตโนมัติโดยไม่โดน min-h-0
-      */}
       <div className="flex-1 relative overflow-hidden">
         <div
           ref={containerRef}
@@ -163,10 +176,6 @@ const RoomDetail = () => {
 
 
       {/* ================= BOTTOM LAYER: The Glass Dock (Room Selector) ================= */}
-      {/* 
-          <--- FIX: เพิ่ม 'pb-safe' ที่ Wrapper ชั้นนอก 
-          เพื่อกันไม่ให้แถบเลือกห้องโดน Home Bar ของ iPhone
-      */}
       <div className="
         absolute bottom-4 left-0 right-0 z-40 pointer-events-none
         pb-safe md:pb-8 pt-6
@@ -197,14 +206,12 @@ const RoomDetail = () => {
                 `}
                 title={r.name}
               >
-                {/* Thumbnail Image */}
                 <img 
                   src={r.mainImage} 
                   alt={r.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
-                {/* Active Indicator */}
                 {idx === safeIndex && (
                   <motion.div 
                     layoutId="activeRoom"
@@ -216,6 +223,16 @@ const RoomDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* ================= INSERTED: DesktopArrows ================= */}
+      {/* วางไว้ที่นี่ ด้านล่างสุดของ Main Container */}
+      {/* ส่ง Props: ฟังก์ชันเลื่อน, index ปัจจุบัน, และจำนวนสไลด์ทั้งหมด */}
+      <DesktopArrows
+        onPrev={handlePrev}
+        onNext={handleNext}
+        currentIndex={activeSlideIndex}
+        total={slides.length}
+      />
 
     </div>
   );

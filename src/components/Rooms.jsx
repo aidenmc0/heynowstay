@@ -1,34 +1,67 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useLanguage } from "../contexts/LanguageContext"; // Import เข้ามาเพื่อดึง Content
+import { useLanguage } from "../contexts/LanguageContext";
+import { X } from 'lucide-react'; // ไอคอนปิด
+import { useState, useEffect } from "react";
 
 const Rooms = () => {
-  // --- 1. ดึงข้อมูลจาก Context ---
-  const { content } = useLanguage(); 
+  const { content } = useLanguage();
   
+  // --- 1. State สำหรับจัดการ Overlay (เก็บแค่สถานะเปิด/ปิด และข้อมูลห้อง) ---
+  const [overlay, setOverlay] = useState({
+    isOpen: false,
+    room: null
+  });
+
+  // --- 2. Effect สำหรับ Lock Scroll (คัดลอกมาตรงๆ เหมือน Restaurant) ---
+  useEffect(() => {
+    if (overlay.isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [overlay.isOpen]);
+
+  // --- ฟังก์ชันเปิด Overlay ---
+  const openOverlay = (e, room) => {
+    // สำคัญมาก: หยุดการทำงานของ Link หลัก เพื่อไม่ให้ไปหน้า Detail
+    e.preventDefault(); 
+    e.stopPropagation();
+    setOverlay({ isOpen: true, room });
+  };
+
+  // --- ฟังก์ชันปิด Overlay ---
+  const closeOverlay = () => {
+    setOverlay({ isOpen: false, room: null });
+  };
+
   return (
     <section id="rooms" className="py-16 px-6 max-w-7xl mx-auto bg-warm-50">
       <div className="text-center mb-20">
-        {/* --- 2. ใช้ Text จาก content แทน Hardcode เพื่อรองรับภาษา --- */}
         <h2 className="font-serif text-5xl text-warm-900 mb-4 tracking-tight">
-          {content.roomsTitle} {/* เช่น: Your Sanctuary / พื้นที่พักผ่อนคลาสิก */}
+          {content.roomsTitle}
         </h2>
         <p className="text-warm-700 font-light max-w-2xl mx-auto text-lg md:text-xl">
-          {content.roomsDesc} {/* เช่น: Designed for rest... / ออกแบบมาเพื่อ... */}
+          {content.roomsDesc}
         </p>
       </div>
       
       <div className="flex flex-wrap justify-center -mx-6">
-        {/* --- 3. วน Loop ใช้ content.rooms แทน rooms --- */}
         {content.rooms.map((room) => (
           <Link
             key={room.id}
-            to={`/rooms/${room.id}`}
+            to={`/rooms/${room.id}`} // Link หลักไปหน้า Detail
             className="w-full px-6 md:w-[calc(33.333%-32px)] group cursor-pointer mb-12"
           >
-            {/* Card */}
+            {/* Card Image Wrapper */}
             <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.25)] border border-transparent group-hover:border-forest-600 transition-all duration-700">
-              {/* ใช้ room.mainImage ถูกต้องแล้วในโค้ดที่คุณส่งมา */}
               <img
                 src={room.mainImage}
                 alt={room.name}
@@ -36,25 +69,80 @@ const Rooms = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
               
+              {/* Hover Overlay (Mobile/Desktop) */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="bg-white/90 text-warm-900 px-6 py-2 rounded-full text-sm uppercase tracking-widest backdrop-blur-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  {content.viewDetails} {/* เช่น: View Details / ดูรายละเอียด */}
+                  {content.viewDetails}
                 </span>
               </div>
             </div>
 
-            {/* Info */}
+            {/* Info Section */}
             <div className="mt-6 text-center">
               <h3 className="font-serif text-2xl md:text-3xl text-warm-900 group-hover:text-forest-600 transition-colors mb-2">
                 {room.name}
               </h3>
-              <p className="text-warm-700 font-light leading-relaxed text-sm md:text-base">
+              <p className="text-warm-700 font-light leading-relaxed text-sm md:text-base mb-6">
                 {room.desc}
               </p>
+
+              {/* --- ปุ่ม Action (แสดงเฉพาะ Desktop & Tablet) --- */}
+              <div className="hidden md:flex justify-center items-center gap-4 w-full">
+                
+                {/* ปุ่ม Detail: เป็นสไตล์ Text ขอบบาง */}
+                <span className="px-8 py-2.5 rounded-full border border-warm-900/30 text-warm-900 text-xs uppercase tracking-[0.15em] pointer-events-none">
+                  Detail
+                </span>
+
+                {/* ปุ่ม Price: เปิด Overlay เพียงรูปเดียว */}
+                <button 
+                  onClick={(e) => openOverlay(e, room)}
+                  className="px-8 py-2.5 rounded-full bg-forest-600 text-white text-xs uppercase tracking-[0.15em] shadow-md hover:bg-forest-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  Price
+                </button>
+
+              </div>
             </div>
           </Link>
         ))}
       </div>
+
+      {/* --- 3. Overlay Component (แสดงเฉพาะ Main Image ไม่มี Pagination) --- */}
+      {overlay.isOpen && overlay.room && (
+        <motion.div
+          className="fixed inset-0 z-[60] bg-[#1C1A18]/95 backdrop-blur-xl 
+                     flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={closeOverlay} // คลิกพื้นหลังปิดได้
+        >
+          {/* Close Button */}
+          <button
+            onClick={closeOverlay}
+            className="absolute top-6 right-6 p-3 rounded-full 
+                       bg-white/10 hover:bg-white/20 
+                       backdrop-blur-md border border-white/10 
+                       transition-all group z-50"
+          >
+            <X size={22} className="text-white group-hover:rotate-90 transition-transform" />
+          </button>
+
+          {/* Image Display (เฉพาะ Main Image) */}
+          <motion.img
+            src={overlay.room.mainImage}
+            alt={overlay.room.name}
+            className="max-h-[85vh] max-w-[90vw] object-contain rounded-md shadow-2xl"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            onClick={(e) => e.stopPropagation()} // คลิกรูปไม่ให้ปิด
+          />
+          
+        </motion.div>
+      )}
+
     </section>
   );
 };
